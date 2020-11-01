@@ -3,4 +3,4 @@ function greetings(name = "World"){
 }
 
 greetings()        // Hello World
-greetings('John')  // Hello World
+greetings('John')  // Hello John
