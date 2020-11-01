@@ -24,3 +24,19 @@ let greetings = function(){
 
 greetings.call(person1); // Hello John
 greetings.call(person2); // Hello Mary
+
+
+
+
+// You can also use the call method to pass in any input parameters that the function needs:
+
+let person1 = {
+  name: 'John',
+  age: 22,
+}
+
+let greetings = function(message){
+  console.log(message + ' ' + this.name);
+};
+
+greetings.call(person1, "Hello");   // Hello John
