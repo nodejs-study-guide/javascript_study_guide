@@ -44,3 +44,38 @@ console.log(person.getThis())
   getThis:f getThis {...}
 }
 */
+
+
+// Just running this on it's own
+// gives you the global windows object:
+
+console.log(this)  // [object Window]
+
+// The same thing happens here too:
+
+function greetings() {
+  console.log(this)  
+}
+greetings() // [object Window]
+
+// That's because being inside a function doesn't mean it's inside an object
+
+
+
+
+// when it is inside an object (i.e. struct) then it starts working:
+
+message = {
+  
+  var1: function greetings() {
+          console.log(this)    
+        },
+};
+
+message.var1()
+/*
+{
+  var1:f greetings {...}
+}
+*/
+
