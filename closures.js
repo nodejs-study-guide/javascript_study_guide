@@ -22,8 +22,8 @@ function setupCounter( val ){
 
 
 let counter0 = setupCounter(0);
-console.log(counter0());
-console.log(counter0());
+console.log(counter0());  // 0
+console.log(counter0());  // 1
 let counter10 = setupCounter(10);
-console.log(counter10());
-console.log(counter10());
+console.log(counter10());  // 10
+console.log(counter10());  // 11
