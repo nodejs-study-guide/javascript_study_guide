@@ -17,7 +17,8 @@ let person2 = {
   name: 'John',
 }
 
-// getNameCopy is a function, with the info of person2 pre-injected in
+// getNameCopy is a function, with the info of person2 details pre-injected in
+// in the form of a "this" object
 let getNameCopy = person1.getName.bind(person2) ;
 
 
