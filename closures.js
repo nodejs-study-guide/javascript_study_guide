@@ -1,3 +1,5 @@
+// https://app.pluralsight.com/course-player?clipId=6d576cf4-2cc1-4510-98f0-094f1896306a
+
 // Here's an iife that gets stored in a variable called
 // "greetings". However the 'message' variable's value doesn't 
 // persist inside after the iife initial execution. 
@@ -52,3 +54,5 @@ let counter10 = setupCounter(10);
 console.log(counter10());  // 10
 console.log(counter10());  // 11
 console.log(counter10());  // 12
+
+
