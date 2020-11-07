@@ -15,3 +15,5 @@ greeting() // Hello
 (function greeting() {
   console.log('Hello')
 })()
+
+// also see closures
