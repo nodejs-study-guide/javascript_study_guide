@@ -4,7 +4,8 @@ function printAndRespond (message, callback) {
   // that accepts a callback function 
   // followed by milliseconds delay before executing that function
   // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
-  setTimeout(callback, 3000) //
+
+  setTimeout(callback, 3000) // this is fired and forgotten
 }
 
 function myCallback () {
