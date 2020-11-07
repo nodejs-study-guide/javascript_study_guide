@@ -13,3 +13,7 @@ function print(aCallback) {
 }
 
 print(myCallback)
+
+
+// Another example:
+// https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
