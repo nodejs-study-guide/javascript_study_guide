@@ -60,11 +60,15 @@ console.log('finished')
 This outputs:
 
 // starting
-// Message is : first do 1
+// Message is: first do 1
 // finished
-// Message is : then do 2
-// Message is : then do 3
-// no more requests
+// Message is: then do 2   // this dispalays afer 5 seconds
+// Message is: then do 3
 
+The ordering has improved, but still not 100% correct. 
+Also the nesting of code is ugly and hard to read. 
 */
+
+
+
 
