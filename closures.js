@@ -1,4 +1,5 @@
-// example 1
+// example 1 - simple closure example
+
 
 let greetings = (function() {
   let message = "hello";
@@ -13,7 +14,7 @@ let greetings = (function() {
 console.log(greetings.getFinalMessage())
 
 
-// example 2  - variable gets stored inside function and get's updated. 
+// example 2  - closure - variable gets stored inside function and get's updated. 
 function setupCounter( val ){
   return function counter() {
     return val++;
