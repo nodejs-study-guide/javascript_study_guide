@@ -64,8 +64,41 @@ This outputs:
 // Message is: then do 3
 
 The ordering has improved, but still not 100% correct. 
-Also the nesting of code is ugly and hard to read. 
+Also the nesting of code is ugly and hard to read.
+
+So the next thing we're going to do is reduce/eliminate all this nesting. And to do that by using "Promises". 
+
+
+
+A promise is a javascript builtin object. It comes with two methods "resolve" and "reject". 
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve
+
+
+When instantiating a "Promise" object, you have to pass in a function, which in turn can accept 2 input parameters. 
+
+
+let myResolve = function() {
+  return 'Hello World'
+}
+
+let myReject = function() {
+  return 'Hello World'
+}
+
+let inputFunction = function() {
+  return 'Hello World'
+}
+
+let myPromise = new Promise(inputFunction)
+
+
+
+
 */
+
 
 
 
