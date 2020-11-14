@@ -11,8 +11,6 @@ console.log('starting')
 printAndRespond('first do 1', 5000)
 printAndRespond('then do 2', 1000)
 printAndRespond('then do 3', 1000)
-
-
 console.log('finished')
 
 /*
