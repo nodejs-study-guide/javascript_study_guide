@@ -14,13 +14,14 @@ printAndRespond('then do 3', 1000)
 console.log('finished')
 
 /*
-In this example we, used teh builtin setTimeout() function
+In this example we, used the builtin setTimeout() function
 as a way to mimic api responses, which can be slow 
 due to network speed issues. 
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
-The first parameter specifies what function to run, and the
-second parameter sets how how many milliseconds to wait before
-running the function. 
+
+setTimeout() requires 2 input parameters,
+ 1. first parameter specifies what function to run, and the
+ 2. second parameter sets how how many milliseconds to wait before running the function. 
 
 
 The above outputs:
@@ -33,7 +34,15 @@ The above outputs:
 
 The ordering looks wrong here. 
 
-So how do we fix it?
+
+
+This is because all javascript operations (e.g. setTimout), are asynchronous operations in JavaScript. 
+i.e. javascript will not wait for the request to complete. Rather, it will continue on its way. 
+
+Javascript is designed to run code asynchronously in order to run as fast as possible. 
+
+
+So how do we fix it, and make things run more sequentially?
 
 
 One option is to set up callbacks, and nested arrow functions
@@ -67,39 +76,5 @@ The ordering has improved, but still not 100% correct.
 Also the nesting of code is ugly and hard to read.
 
 So the next thing we're going to do is reduce/eliminate all this nesting. And to do that by using "Promises". 
-
-
-
-A promise is a javascript builtin object. It comes with two methods "resolve" and "reject". 
-
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve
-
-
-When instantiating a "Promise" object, you have to pass in a function, which in turn can accept 2 input parameters. 
-
-
-let myResolve = function() {
-  return 'Hello World'
-}
-
-let myReject = function() {
-  return 'Hello World'
-}
-
-let inputFunction = function() {
-  return 'Hello World'
-}
-
-let myPromise = new Promise(inputFunction)
-
-
-
-
-*/
-
-
-
 
 
