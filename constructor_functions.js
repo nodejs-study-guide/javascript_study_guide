@@ -57,3 +57,26 @@ console.log(person4)
 let message = person4.greetings('hi')
 console.log(message)
 
+
+
+// More notes:
+
+So far we created an object on the fly. An "object constructor function" is function that let's you defined a blueprint of an object, which you can use and reuse to create multiple objects with.
+
+https://www.w3schools.com/js/js_object_constructors.asp
+
+Here's an exmaple:
+
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.currentAge = age;
+  this.eyeColor = eye;
+}
+Then create an object from the constructor (blueprint/template) using the "new" key word:
+
+let myFather = new Person("John", "Doe", 50, "blue");
+
+Then you can access "50" using
+
+myFather.currentAge
