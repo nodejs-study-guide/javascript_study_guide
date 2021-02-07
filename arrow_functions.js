@@ -83,3 +83,29 @@ console.log(output);        // 17
 
 
 
+// The "this" keyword doesn't exist in arrow-functions.
+// If you try to use it, then it ends up resolving to the 
+// global window "this" object:
+
+
+let message = {
+  name: 'John',
+  regularAnonymousFunction: function() {
+    console.log(this)
+    console.log('Hello ' + this.name)
+  },
+  arrowFunction: () => {
+    console.log(this)
+    console.log('Hi ' + this.name)
+  }
+
+}
+
+
+message.regularAnonymousFunction()
+message.arrowFunction()
+
+
+
+
+
