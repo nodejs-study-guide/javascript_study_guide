@@ -41,3 +41,10 @@ false
 > .exit
 ```
 
+
+The node's -p flag is a handy way to run a single line of javascript code on the command line:
+
+```
+$ node -p "os.cpus().length"
+12
+```
