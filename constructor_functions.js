@@ -1,3 +1,5 @@
+// node constructor_functions.js
+
 // You can create several object (of the same structure) like this:
 
 let person1 = {
@@ -61,11 +63,11 @@ console.log(message)
 
 // More notes:
 
-So far we created an object on the fly. An "object constructor function" is function that let's you defined a blueprint of an object, which you can use and reuse to create multiple objects with.
+// So far we created an object on the fly. An "object constructor function" is function that let's you defined a blueprint of an object, which you can use and reuse to create multiple objects with.
 
-https://www.w3schools.com/js/js_object_constructors.asp
+// https://www.w3schools.com/js/js_object_constructors.asp
 
-Here's an exmaple:
+// Here's an exmaple:
 
 function Person(first, last, age, eye) {
   this.firstName = first;
@@ -73,10 +75,11 @@ function Person(first, last, age, eye) {
   this.currentAge = age;
   this.eyeColor = eye;
 }
-Then create an object from the constructor (blueprint/template) using the "new" key word:
+// Then create an object from the constructor (blueprint/template) using the "new" key word:
 
 let myFather = new Person("John", "Doe", 50, "blue");
 
-Then you can access "50" using
+// Then you can access "50" using
 
-myFather.currentAge
+console.log(myFather.currentAge)
+
