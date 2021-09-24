@@ -1,7 +1,7 @@
-
+// EXAMPLE A
 // "this" is a builtin object is used for accessing something that already exists in the current. 
 // object, which in this case is "person"
-let person = {
+let personA = {
   title: 'Mr',
   firstName: 'John',
   lastName: 'Smith',
@@ -11,14 +11,15 @@ let person = {
     }, 
 }
 
-console.log(person.greetings())  // Hello my name is John Smith
+console.log(personA.greetings())  // Hello my name is John Smith
 
 
 
 
 
+// EXAMPLE B
 // arrow-function equivalent
-let person = {
+let personB = {
   title: 'Mr',
   firstName: 'John',
   lastName: 'Smith',
@@ -31,9 +32,9 @@ let person = {
   }
 }
 
-console.log(person.greetings()) // Hello my name is John Smith
+console.log(personB.greetings()) // Hello my name is John Smith
 
-console.log(person.getThis())
+console.log(personB.getThis())
 /*
 {
   title:"Mr",
