@@ -7,7 +7,7 @@ let price = 28 ;
 
 // the round brackets around the condition part is actually optional but is best practice to always include them for readability. 
 
-// It can also be sued to set variables:
+// It can also be used to set variables:
 
 
 let answer = (price > 25) ? "very expensive" : "a little expensive"
