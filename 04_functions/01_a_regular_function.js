@@ -73,7 +73,7 @@ console.log("EXAMPLE F")
 // function can access constant+variables that are defined in outer scopes
 const a = 2
 let b = 3
-function sumF(firstName, lastName){
+function sumF(){
 	console.log(a + b)
 }
 

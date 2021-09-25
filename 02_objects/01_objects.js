@@ -45,3 +45,4 @@ employee = {
 	[mySymbol]:  'secret data, e.g. a password' 
 }
 // The only code that can access the secret data, is code that has access to the mySymbol variable. 
+// more info, see: https://app.pluralsight.com/course-player?clipId=5667e465-8dd0-45c8-8882-5d9aa4bb4e14
