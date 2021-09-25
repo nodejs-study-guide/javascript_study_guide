@@ -7,7 +7,7 @@
 
 
 
-
+console.log("Example A")
 person = {
 	name: 'John',
 	age: 32,
@@ -22,3 +22,26 @@ console.log(person.name)            // John
 console.log(person.age)             // 32
 console.log(person.greetings())     // hello John
 console.log(person.farewell())      // goodbye John
+
+// accessing a non-existient property
+console.log(person.gender)          // undefined     // noticed script doesn't fail. 
+
+
+
+
+console.log("Example B")
+// Alternative syntax for accessing properperties:
+console.log(person['name'])            // John
+console.log(person['age'])             // 32
+
+
+
+console.log("Example C")
+// symbol is a special data type user for storing sensitive data. 
+let mySymbol = Symbol()
+employee = {
+	name: 'John',
+	age: 32,
+	[mySymbol]:  'secret data, e.g. a password' 
+}
+// The only code that can access the secret data, is code that has access to the mySymbol variable. 
