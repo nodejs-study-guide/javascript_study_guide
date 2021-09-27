@@ -72,16 +72,20 @@ console.log(listD)    // [ 1, 2, 3, 'hello' ]
 
 // removing the last element off of an array is done using the "pop" builtin method:
 
-listD.pop()
+lastValue = listD.pop()
 console.log(listD)   // [ 1, 2, 3 ]
-
+console.log(lastValue) . // hello
 
 console.log("EXAMPLE E")
-//Take a value off the beginning of an array:
+//Take a value off from the beginning of an array:
 
 let listE = [ 1, 2, 3 ];
 nextValue = listE.shift()
 
-console.log(listE)    // [ 2, 3]
+console.log(listE)    // [ 2, 3 ]
 console.log(nextValue)  // 1
 
+// To insert a value to the beginning of an array we use the unshift method:
+
+listE.unshift("hello")
+console.log(listE)    // [ 'hello' , 2, 3 ]
