@@ -117,3 +117,25 @@ function greetingsH(){
 
 greetingsH()
 // fullName("Tony", "Stark")     // This gives error, that's because the function only exists in the scope it's defined in. 
+
+
+
+
+console.log("EXAMPLE I")
+// Passing in an insufficient number of input parameters is allowed
+
+function greetingsI(firstName, lastName){
+	console.log("Hello " + firstName + " " + lastName)
+}
+
+greetingsI()    // Hello undefined undefined
+
+
+
+console.log("EXAMPLE J")
+// Passing in an excess number of input parameters is allowed.  The extra arguments are simply ignored. 
+function greetingsJ(firstName, lastName){
+	console.log("Hello " + firstName + " " + lastName)
+}
+
+greetingsJ("Sir", "James", "Bond")    // Hello Sir James
