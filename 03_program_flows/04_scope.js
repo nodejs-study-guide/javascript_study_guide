@@ -18,8 +18,11 @@ if (true) {
 
 console.log(varA) // 5
 
-
-
+// There are 2 types of scopes in javascript, "global scope" and "function scope". variables declared outside of any functions are global scope,
+// and are accessible by any functions in that application. 
+// variables declared inside functions are function scoped and can only be accessed by the code inside that function. 
+// It can be easy to pollute global scope with lots of variables. That's why it's best practice to create a single (struct)
+// object and store all your data inside it. 
 
 
 console.log("EXAMPLE C")
