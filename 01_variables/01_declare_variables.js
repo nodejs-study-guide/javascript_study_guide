@@ -1,3 +1,36 @@
+/*
+
+Javascript has the following primitive data types:
+
+- boolean
+- null
+- undefined
+- number
+- string
+
+
+Javascript also supports the following composite/object/struct datatypes:
+
+- Array
+- Error
+- Function
+- Object
+- RegExp
+
+
+You can use the "typeof" operator to print out the type of data stored in a variable. 
+
+
+There are also "Object data types". These are basically a simple object that stores a primitive data type. It's best to 
+avoid using these types. 
+
+- new Boolean       // typeOf prints these out as "object"
+- new Number
+- new String
+
+*/
+
+
 
 
 // variables are declare using the "let" keyword

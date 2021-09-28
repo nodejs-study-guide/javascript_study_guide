@@ -8,6 +8,7 @@ try {
 	console.log("encountered an error")
 	console.log(errorX.message) // result is not defined
 	console.log(typeof errorX) // object
+	console.log(errorX.name)   // ReferenceError    // this shows the type of error message this is. 
 }
 finally {
 	console.log("This always run, irrespective of whether an error was encountered.")
