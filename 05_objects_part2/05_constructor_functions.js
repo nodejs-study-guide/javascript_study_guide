@@ -86,8 +86,12 @@ console.log(myFather.currentAge)
 
 
 console.log("EXAMPLE C")
-// you can use the "instanceof" operator to find out what class an object belongs to.  This just does a boolean check. 
+// you can use the "instanceof" operator to find out wheter an object belongs to a particular class. This just does a boolean check. 
 
 console.log(myFather instanceof String)  // false // note this is "String" object and not "string" primitive datatype
 console.log(myFather instanceof Person)  // true
 console.log(myFather instanceof Object)  // true    // since "Person", like all structs are derived from the top level "Object" data type. 
+
+
+console.log("EXAMPLE D")
+console.log(this.toString)
