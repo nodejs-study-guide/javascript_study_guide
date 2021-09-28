@@ -36,3 +36,47 @@ listB2[1] = "z"
 console.log(listB2) // [ 'a', 'z', 'c' ]
 
 // Notice the above, we did a deep copy. This is true for an array of primitive values. 
+
+// but this approach doesn't work for an array of objects. 
+
+
+
+
+console.log("EXAMPLE B")
+
+// notice there's no return statement 
+function Person (firstName, lastName, age, eyeColor){
+  this.firstName= firstName
+  this.lastName= lastName
+  this.age= age
+  this.eyeColor= eyeColor
+}
+
+// The "new" keyword captures the object stored inside "this" 
+let person1 = new Person('John','Smith',23,'brown')
+let person2 = new Person('David','Stride',34,'blue')
+
+let peopleA = [person1, person2]
+
+let peopleB = [...peopleA]
+
+console.log(peopleA)
+console.log(peopleB)
+
+console.log("changing age")
+
+person2.age = 60 // this ends up changing it for both arrays, PeopleA and PeopleB. That's becuase arrays holds pointers to objects. 
+
+console.log(peopleA)
+console.log(peopleB)
+
+
+console.log("EXAMPLE C")
+
+// Concatenate 2 arrays together. 
+
+listC1 = ["a", "b", "c"]
+listC2 = ["d", "e", "f"]
+combinedList = [...listC1, ...listC2]
+
+console.log(combinedList) // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
