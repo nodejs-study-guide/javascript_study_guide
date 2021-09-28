@@ -41,7 +41,7 @@ console.log(person3)
 
 
 
-// This is very repetive, and hard to maintain if you have 100s of objects. Hence better to you use a constructor like this instead:
+// This is very repetitive, and hard to maintain if you have 100s of objects. Hence better to you use a constructor like this instead:
 
 // notice there's no return statement 
 function person (firstName, lastName, age, eyeColor){
@@ -83,3 +83,11 @@ let myFather = new Person("John", "Doe", 50, "blue");
 
 console.log(myFather.currentAge)
 
+
+
+console.log("EXAMPLE C")
+// you can use the "instanceof" operator to find out what class an object belongs to.  This just does a boolean check. 
+
+console.log(myFather instanceof String)  // false // note this is "String" object and not "string" primitive datatype
+console.log(myFather instanceof Person)  // true
+console.log(myFather instanceof Object)  // true    // since "Person", like all structs are derived from the top level "Object" data type. 
