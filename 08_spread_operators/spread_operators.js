@@ -80,3 +80,26 @@ listC2 = ["d", "e", "f"]
 combinedList = [...listC1, ...listC2]
 
 console.log(combinedList) // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+
+
+console.log("Example D")
+// spread operators can be used to make copies of structs/objects. 
+
+let personD1 = {
+  firstName: "John",
+  lastName: "Brown",
+  age: 23,
+  eyeColor: "green"
+}
+
+
+
+let personD2 = { ...personD1 }
+
+personD2.age = 10
+
+
+console.log(personD1) // { firstName: 'John', lastName: 'Brown', age: 23, eyeColor: 'green' }
+
+console.log(personD2) // { firstName: 'John', lastName: 'Brown', age: 10, eyeColor: 'green' }
+
