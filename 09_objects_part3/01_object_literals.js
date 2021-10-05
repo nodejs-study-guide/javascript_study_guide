@@ -119,9 +119,19 @@ console.log(Object.is(personD1, personD2))  // false
 personD1 = personD2        // this makes both variables point to the same memory location. 
 console.log(Object.is(personD1, personD2)) // true
 
-// note this pointer related behaviour only applies when comparing objects. If comparing primitive data, it just does a value based
-// comparison instead, e.g:
+// note this pointer related behaviour only applies when comparing objects. 
+// If comparing primitive data, it just does a value based comparison instead, e.g:
 
 console.log(Object.is(personD1.firstName, personD2.firstName))  // true
+
+
+console.log("EXAMPLE E")
+// Notice that when 2 objects points to the same memory address, editing one object ends up editing the other object:
+personD1.firstName = "Fiona"
+console.log(personD1.firstName) // Fiona
+console.log(personD2.firstName) // Fiona
+
+
+
 
 

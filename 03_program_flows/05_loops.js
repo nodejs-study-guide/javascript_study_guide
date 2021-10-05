@@ -30,9 +30,7 @@ do {
 
 
 console.log("Example D")
-// Here's an example of a FOR-IN loop.  This is useful for iterating through a list  
-
-
+// Here's an example of a FOR-IN loop that's used to iterate through all of an object's key-value properties.
 
 let personD = {
 	firstName: "John",
@@ -40,8 +38,8 @@ let personD = {
 	age: "30",
 } 
 
-for (key in personD){
-	console.log(key + " is equal to " + personD[key])
+for (myKey in personD){
+	console.log(myKey + " is equal to " + personD[myKey])
 }
 
 // this outputs:

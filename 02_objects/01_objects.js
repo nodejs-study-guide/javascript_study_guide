@@ -30,7 +30,7 @@ console.log(person.gender)          // undefined     // noticed script doesn't f
 
 
 console.log("Example B")
-// Alternative syntax for accessing properperties:
+// Alternative syntax for accessing properties:
 console.log(person['name'])            // John
 console.log(person['age'])             // 32
 
