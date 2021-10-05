@@ -34,6 +34,16 @@ console.log("Example B")
 console.log(person['name'])            // John
 console.log(person['age'])             // 32
 
+// This syntax is useful if the key contains special characters, empty spaces,  e.g.:
+
+// console.log(person['first name'])
+
+// another possibility is if the key's name itself is stored inside another variable, e.g.
+
+currentAgeB = "age"
+console.log(person[currentAgeB])
+
+
 
 
 console.log("Example C")

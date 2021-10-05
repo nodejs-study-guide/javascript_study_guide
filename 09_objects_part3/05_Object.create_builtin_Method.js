@@ -55,3 +55,24 @@ let personA2 = Object.create(
 console.log(personA2)
 
 // Notice how verbose everything has to be. That's why Object.create() isn't usually used directly in this way. 
+
+// Notice we have to set the enumerable/writable/configurable settings. These are called "property descriptors"
+
+console.log("EXAMPLE B")
+// Here's how to view the property descriptor settings for an object. 
+
+let personB1 = {
+	firstName: "Bruce",
+	lastName: "Banner",
+	greetings() { return 'hello ' + this.firstName + ' ' + this.lastName }
+}
+
+console.log(  Object.getOwnPropertyDescriptor(personB1, "firstName")  )
+// The above outputs:
+
+// {
+// 	value: 'Bruce',
+// 	writable: true,
+// 	enumerable: true,
+// 	configurable: true
+// }
