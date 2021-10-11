@@ -62,7 +62,7 @@ function Person(foreName, surName, age) {
 // The key indicator that the above function is a constructur function, is the use of the "this." key word. Also, constructor
 // functions don't use the "return" key word.
 
-// To call this constructor function, we use the new key word:
+// To call this constructor function, we use the "new" key word:
 
 let superman = new Person("Clark", "Kent", 40)
 
