@@ -45,15 +45,10 @@ class PersonB {
 		this.lastName = surName
 		this.age = age
 	}
-
-	// To create a getter, you just use the "get" key word.:
-	get fullName() {
-		return this.firstName + ' ' + this.lastName
-	}
-
+	
 }
 
-// noticed we use the saem "new" key word to drive the class.
+// noticed we use the same "new" key word to drive the class.
 let spiderman = new PersonB("Peter", "Parker", 18)
 
 console.log(spiderman)   // PersonB { firstName: 'Peter', lastName: 'Parker', age: 18 }

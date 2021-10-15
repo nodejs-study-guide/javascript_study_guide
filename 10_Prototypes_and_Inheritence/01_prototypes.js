@@ -5,16 +5,32 @@ console.log("Example A")
 function PersonA(forename, surname){
 	this.firstName = forename
 	this.lastName = surname
+
+	this.greetings = function () { return 'hello ' + this.firstName + ' ' + this.lastName }
+
+
 }
 
 console.log(typeof PersonA)
 console.log(PersonA)
 
-
+console.log("Example A1XXXXXXXXXXXXXXXXX")
 // When you create a constructor function, it comes with a default property called "prototype". 
 // this prototype stores a memory pointer to a generic empty object:
 console.log(PersonA.prototype) // {}
+// This might look like an empty object, but in actual fact it does contain properties,
+// but these properties are hidden, because their enumerable property is set to false. 
+// we can make it visible by running:
 
+//Object.defineProperty(PersonA.prototype, "greetingsxx" , {enumerable: true}) // this doesn't work, not sure why
+
+console.log(  Object.getOwnPropertyDescriptor(PersonA.prototype, "greetings")  )
+
+console.log(PersonA.propertyIsEnumerable('greetings')); // 
+console.log(PersonA.prototype) // {}
+
+
+console.log("Example A2XXXXXXXXXXXXXXXXX")
 // fyi, as reminder, here's how you can create a generic empty object:
 // let myObject = {}
 
