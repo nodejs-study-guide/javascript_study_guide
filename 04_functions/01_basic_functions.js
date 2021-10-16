@@ -8,6 +8,21 @@ greetingsA()
 greetingsA()
 
 
+console.log("EXAMPLE A1")
+// function can return a single value, using the "return" keyword
+function greetingsA1(){
+	return "hello world"
+}
+
+result = greetingsA1()
+console.log(result)  // hello world
+
+console.log(greetingsA1()) // hello world
+
+// this also works, but it just means the return value isn't captured in a variable and just
+// discarded. 
+greetingsA1()
+
 
 
 console.log("EXAMPLE B")
@@ -47,11 +62,21 @@ function sumF(){
 
 sumF()
 
-// If you want to avoid a function from using a outside variable. Then you need to redeclare 
+// If you want to avoid an function from using a outside variable. Then you need to redeclare 
 // the variable (using 'let') inside the function. Then that variable will be treated as a 
 // seperate variable that only exists while the function is running. We're effectively doing a temporary override. 
 
 
+
+
+console.log("EXAMPLE F2")
+// while function can access outer scopes variable, other constructs, e.g. if-statements can't do this
+let varF2 = 5
+if (true) {
+	// console.log(varA)   // this will error, because variables only exists in the scope they are declared in. 
+	let varF = 10
+	console.log(varF2)   // 10
+}
 
 console.log("EXAMPLE G")
 // variables and constants declared inside functions, only exists inside those functions. 
@@ -73,7 +98,7 @@ sumG()
 
 
 console.log("EXAMPLE H")
-// You can define functions inside other functions.  
+// You can define functions inside other functions, i.e one function nested inside another.  
 function greetingsH(){
 
 	function fullName(firstName, lastName){
@@ -91,9 +116,18 @@ greetingsH()
 
 
 console.log("EXAMPLE J")
-// Passing in an excess number of input parameters is allowed.  The extra arguments are simply ignored. 
+// Passing in an excess number of input parameters is allowed.  The extra arguments are simply
+// not accessible via a input-parameter handle, e.g. lastName. Although you can still access
+// them via the "arguments" variable. . 
 function greetingsJ(firstName, lastName){
 	console.log("Hello " + firstName + " " + lastName)
+
+	// You can also access the input parameter's values using the builtin "arguments" array. 
+	console.log(arguments[0]) // Sir
+	console.log(arguments[1]) // James
+	console.log(arguments[2]) // Bond       // this is an extra parameter. 
+	console.log(arguments[3]) // undefined  
+	console.log(arguments.length) // 3
 }
 
 greetingsJ("Sir", "James", "Bond")    // Hello Sir James
