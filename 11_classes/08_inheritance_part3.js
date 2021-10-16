@@ -1,11 +1,6 @@
 console.log("Example A")
-// here we give an example of a real world example of using inheritance and static properties/methods
-// together.  
-
-// There can be times where you have a object from a parent class (Person), and you want to use
-// that object create an object from a child class (employee). E.g. a person applys for a job
-// in which case they are a "person" object, but if they pass the job interview, they become an
-// "employee"
+// Another possibility that might exist, is the reverse of the above example, i.e you have a student object,
+// and want to create a person object from it, here's an example:
 
 
 
@@ -26,6 +21,10 @@ class Person {
 		this.lastName = value.split(' ')[1]
 	}
 
+	// we create this new static method here. 
+	static fromEmployee(person){
+		return new Person(person.firstName, person.lastName, person.age)
+	} 
 
 	isAdult() {
         return this.age >= 18
@@ -47,14 +46,11 @@ class Employee extends Person {
 	
 }
 
-let Superman = new Person("Clark", "Kent", 32)
-let journalist = Employee.fromPerson(Superman, 45000)
+// we create the child object
+let journalist = new Employee("Clark", "Kent", 32, 45000)
+
+// we use the child object to create the parent object
+let superman = Person.fromEmployee(journalist)
 
 
-console.log(journalist) // this prints:
-// Employee {
-// 	firstName: 'Clark',
-// 	lastName: 'Kent',
-// 	age: 32,
-// 	salary: 45000
-//   }
+console.log(superman) // Person { firstName: 'Clark', lastName: 'Kent', age: 32 }

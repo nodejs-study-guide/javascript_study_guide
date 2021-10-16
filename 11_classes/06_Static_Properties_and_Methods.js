@@ -41,3 +41,14 @@ console.log(Person.greetings()) // Hi there, this is a static method
 
 // we access static properties in a similar way:
 console.log(Person.nationality) // USA
+
+
+// This is how we access the properties/methods of builtin objects such as Maths, e.g:
+console.log(Math.PI)  // 3.141592653589793
+// however, note that the Math builtin object might be using literal objects, or constructor functions, to 
+// achieve the same results. 
+
+
+
+
+
