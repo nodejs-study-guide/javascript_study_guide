@@ -44,11 +44,13 @@ greetingsB.call(Jonny); // Hello John
 console.log("EXAMPLE C")
 // This also wors for regular functions 
 
-function greetingsC(){
+function greetingsC(msg){
   console.log(this)                   // { name: 'John', age: 22 }
-  console.log('Hello C - ' + this.name);
+  console.log( msg + this.name);
 }
 
 // Notice we're applying the call method here. 
-greetingsC.call(Jonny); // Hello John
+greetingsC('Hello C - ').call(Jonny); // Hello John
 
+
+// Functions also comes with a fiew other methods in addition 
