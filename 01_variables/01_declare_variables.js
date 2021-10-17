@@ -1,3 +1,7 @@
+// Always start your *.js files with the "use strict" line. 
+// This line will ensure 
+'use strict'
+
 /*
 
 Javascript has the following primitive data types:

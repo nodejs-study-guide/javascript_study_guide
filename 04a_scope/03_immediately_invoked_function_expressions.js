@@ -25,6 +25,8 @@ console.log("EXAMPLE B");
 })()
 // the above prints "Hello B" straight away. 
 
+// At the moment, what's the point of using IIFE, it seems a bit pointless. However it does make 
+// sense when using IIFE in conjunction with "closures" which we'll cover next. 
 
 console.log("EXAMPLE B1");
 // the function name is actually optional:
@@ -58,11 +60,3 @@ console.log(typeof greetingC2var) // string
 console.log(greetingC2var) // Hello C
 
 // note again, the function name is optional
-
-
-
-
-
-
-
-// also see closures

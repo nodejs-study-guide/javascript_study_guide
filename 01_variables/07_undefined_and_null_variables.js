@@ -1,3 +1,4 @@
+'use strict'
 
 // undefined: you create a variable without assigning value to it.
 // null: you had a variable with data, but emptied it out by using "null":

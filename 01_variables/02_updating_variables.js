@@ -1,3 +1,5 @@
+'use strict'
+
 // node 01_variables/02_updating_variables.js  
 
 

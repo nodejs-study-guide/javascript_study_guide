@@ -1,3 +1,5 @@
+'use strict'
+
 // node  01_variables/03_constants.js 
 
 // const are declared using the "const" keyword. 

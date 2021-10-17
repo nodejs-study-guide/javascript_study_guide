@@ -1,3 +1,5 @@
+'use strict'
+
 // node 01_variables/05_strings.js 
 
 

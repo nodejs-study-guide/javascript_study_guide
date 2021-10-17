@@ -1,3 +1,5 @@
+'use strict'
+
 // node 01_variables/04_the_var_keyword.js 
 
 // When declaring variables, you can use the "var" key word as an alternative to the "let" key word. 
