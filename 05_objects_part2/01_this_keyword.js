@@ -11,47 +11,29 @@ let personA = {
   getAge: function (age) {
     return 'I am ' + age + ' years old'
   },
-}
-
-console.log(personA.greetings())  // Hello my name is John Smith
-console.log(personA.getAge(34))   // I am 34 years old
-
-
-// Methods are actually a type of function:
-console.log(typeof personA.getAge)    // function
-
-// that's associated to an object. so to call that method you have to use 
-// objectName.MethodName() syntax. 
-
-
-console.log("EXAMPLE B")
-// arrow-function equivalent
-let personB = {
-  title: 'Mr',
-  firstName: 'John',
-  lastName: 'Smith',
-  age: 38,
-  greetings: function () {
-    return 'Hello my name is ' + this.firstName + ' ' + this.lastName
-  },
   getThis: function () {
     return this;
   }
 }
 
-console.log(personB.greetings()) // Hello my name is John Smith
-
-console.log(personB.getThis())
+console.log(personA.greetings())  // Hello my name is John Smith
+console.log(personA.getAge(34))   // I am 34 years old
+console.log(personA.getThis())
 /*
 {
-  title:"Mr",
-  firstName:"John",
-  lastName:"Smith",
-  age:38,
-  greetings:f greetings {...},
-  getThis:f getThis {...}
+  title: 'Mr',
+  firstName: 'John',
+  lastName: 'Smith',
+  greetings: [Function: greetings],
+  getAge: [Function: getAge],
+  getThis: [Function: getThis]
 }
 */
+
+// Methods are actually a type of function:
+console.log(typeof personA.getAge)    // function
+
+
 
 
 // Just running this on it's own
