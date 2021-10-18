@@ -1,7 +1,9 @@
 console.log("EXAMPLE A")
-// spread operators spreads expands an array into individual arguments before 
-// feeding it into a function. It's kind of like how a "rest parameter" works 
-// but in reverse. 
+// Earlier we saw "rest parameters", you can incorporate a rest parameter in your 
+// function's definition, to tell everyone then this function can accept multiple input parameters. 
+
+// But what if your function is designed to accept a fix number of parameters, and you want to 
+// call that function with some arguments, but those arguments are currently in an array:
 
 function greet(person1, person2) {
   console.log('Hello ' + person1 + ' and ' + person2 )
@@ -9,31 +11,38 @@ function greet(person1, person2) {
 
 let names = ['John', 'Mary'];
 
+// one way to do this, is:
+
+greet(names[0], names[1])
+
+
+// Alternatively we can use spread operators. Spreads expands an array into individual arguments before 
+// feeding it into a function. 
+
+
+greet(...names) // Hello John and Mary
+
 // notice we pass in the ellipsis symbol (...) which kinda explodes the array into individual 
 // comma seperated arguments before feeding them into the 'greet' function. 
-greet(...names) // Hello John and Mary
+
 
 
 console.log("EXAMPLE B")
 // It can also split a string too. 
-function greet(person1, person2) {
-  console.log('Hello ' + person1 + ' and ' + person2 );
-}
-
 let letters = 'ab';
 greet(...letters); // Hello a and b
 
 
 
-console.log("EXAMPLE B")
+console.log("EXAMPLE C")
 // spread operator can be used to make a copy of an array:
 
-let listB1 = ["a", "b", "c"]
-let listB2 = [...listB1]
+let listC1 = ["a", "b", "c"]
+let listC2 = [...listC1]
 
-console.log(listB1) // [ 'a', 'b', 'c' ]
-listB2[1] = "z"
-console.log(listB2) // [ 'a', 'z', 'c' ]
+console.log(listC1) // [ 'a', 'b', 'c' ]
+listC2[1] = "z"
+console.log(listC2) // [ 'a', 'z', 'c' ]
 
 // Notice the above, we did a deep copy. This is true for an array of primitive values. 
 
@@ -44,7 +53,7 @@ console.log(listB2) // [ 'a', 'z', 'c' ]
 
 console.log("EXAMPLE B")
 
-// notice there's no return statement 
+// here's a constructor function, that can be used to create "constructor" objects. 
 function Person (firstName, lastName, age, eyeColor){
   this.firstName= firstName
   this.lastName= lastName

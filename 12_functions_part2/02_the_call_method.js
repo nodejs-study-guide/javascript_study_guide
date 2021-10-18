@@ -33,7 +33,7 @@ console.log("EXAMPLE B")
 
 let greetingsB = function(){
   console.log(this)                   // { name: 'John', age: 22 }
-  console.log('Hello B -' + this.name);
+  console.log('Hello B - ' + this.name);
 }
 
 // Notice we're applying the call method here. 
@@ -42,15 +42,18 @@ greetingsB.call(Jonny); // Hello John
 
 
 console.log("EXAMPLE C")
-// This also wors for regular functions 
+// This also works for regular functions 
 
+// notice this time our functions accepts the msg input parameter 
 function greetingsC(msg){
   console.log(this)                   // { name: 'John', age: 22 }
-  console.log( msg + this.name);
+  console.log(msg + this.name);
 }
 
-// Notice we're applying the call method here. 
-greetingsC('Hello C - ').call(Jonny); // Hello John
+// the call method's first parameter is what will get saved to the "this" object. 
+// all the remaining arguments are mapped to the function's input parameters. 
+greetingsC.call(Jonny, 'Hello C - ')   // Hello John
 
 
-// Functions also comes with a fiew other methods in addition 
+// Functions also comes with a few other builtin methods in addition to the call, method. 
+// e.g. the "bind" and "apply" methods. We'll cover them next. 
