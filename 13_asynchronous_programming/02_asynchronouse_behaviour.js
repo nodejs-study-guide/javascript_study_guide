@@ -16,7 +16,6 @@ function printAndRespond (message, delay) {
     // 1. first parameter specifies what function to run, and the
     // 2. second parameter sets how how many milliseconds to wait before running the function. 
     setTimeout(apiResponse, delay)
-    console.log('Message is : 4')
 }
 console.log('starting')
 printAndRespond('first do 1', 5000)
