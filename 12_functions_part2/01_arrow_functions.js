@@ -37,6 +37,15 @@ let messageC = greetingsC()
 console.log(messageC)      // Hello World - C
 
 
+console.log("EXAMPLE C1")
+// You can also use "_" instead of "()". This just means, you don't 
+// care about input parameters. It's a bit like golang, where you use it to
+// discard return values from a function
+
+let greetingsC = _ =>  'Hello World - C'
+let messageC = greetingsC()
+console.log(messageC)      // Hello World - C
+
 console.log("EXAMPLE D")
 // Here's one with an input parameter
 
