@@ -8,13 +8,16 @@ function Greetings(name) {
 
 
 
-// The "message" object only exist because I declared it above. Similarly the "Greetings" object only exists because I defined it. 
-// However the javascript runtime comes with a collection of objects already builtin in. I.e. they exist without me needing to define/declare
+// The "message" object only exist because I declared it above. 
+// Similarly the "Greetings" object only exists because I defined it. 
+// However the javascript runtime comes with a collection of objects already builtin in. 
+// I.e. they exist without me needing to define/declare
 // them upfront. You can find them here - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 // e.g the "Math" object:
 
 console.log(typeof Math)     // object
+
 
 // here we're accessing one of Math object's property
 console.log(Math.PI)         // 3.141 
@@ -38,11 +41,12 @@ console.log(typeof Number)   // function      - Note the builtin object "Number"
 // you can call some special methods called "static methods" directly on this builtin function 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#static_methods
 
+console.log(Date())  // Fri Nov 19 2021 16:06:48 GMT+0000 (Greenwich Mean Time)
 console.log(Date.now())  // 1612720322842
 
 
 // However to use the 'protoytpe' functions you have to create a "Date" object and apply the function to that object
-y = new Date()
+let y = new Date()
 
 // I think the "new" indicates that this is a constructor function - https://github.com/Sher-Chowdhury/javascript_study_guide/blob/main/constructor_functions.js
 

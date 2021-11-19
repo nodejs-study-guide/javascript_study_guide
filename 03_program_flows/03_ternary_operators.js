@@ -1,3 +1,5 @@
+'use strict'
+
 // Ternary operator is basically an if-statement written into a single line. 
 // The "?" is the "then"-part. and ":" is used for the else-part.
 

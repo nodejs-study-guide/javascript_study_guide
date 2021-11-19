@@ -1,9 +1,6 @@
 'use strict'
 
 // to convert a number to a string, we can use the primitive type's builtin 'toString()' method. 
-
-
-
 console.log("EXAMPLE A")
 let varA = 123
 console.log(typeof varA) // number
@@ -12,7 +9,7 @@ varA = varA.toString()
 console.log(typeof varA) // string
 
 // Notice a variable can store any data type, from one minute to the next. E.g. varA initially stored an number, but later on it stored 
-// a number. It's not very strict. 
+// a string. It's not very strict. 
 
 
 
@@ -29,7 +26,7 @@ console.log(typeof varB) // string
 varB = Number.parseFloat(varB)
 console.log(typeof varB) // number
 
-// To summarise, if an object's builtin method can't get the job done, then try seeing if any of the methods 
+// As a general rule of thumb, if an object's builtin method can't get the job done, then try seeing if any of the methods 
 // provided by any of the global objects can be used instead. 
 
 
@@ -38,7 +35,7 @@ console.log(typeof varB) // number
 
 
 console.log("EXAMPLE C")
-varC = Number.parseFloat("A100")
+let varC = Number.parseFloat("A100")
 console.log(varC)       // NaN       =  Not a Number
 
 

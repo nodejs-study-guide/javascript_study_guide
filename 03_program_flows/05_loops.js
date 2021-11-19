@@ -1,3 +1,5 @@
+'use strict'
+
 console.log("Example A")
 // simple for-loop 
 for (let i = 0; i < 3; i++) {
@@ -38,7 +40,7 @@ let personD = {
 	age: "30",
 } 
 
-for (myKey in personD){
+for (let myKey in personD){
 	console.log(myKey + " is equal to " + personD[myKey])
 }
 
@@ -72,7 +74,7 @@ let PeopleE = [
 }, 
 ]
 
-for (item of PeopleE){
+for (let item of PeopleE){
 	console.log(JSON.stringify(item))
 }
 
@@ -89,7 +91,7 @@ console.log("Example F")
 
 let PersonF = "David"
 
-for (item of PersonF){
+for (let item of PersonF){
 	console.log(item)
 }
 

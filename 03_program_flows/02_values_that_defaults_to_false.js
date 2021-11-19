@@ -1,3 +1,4 @@
+'use strict'
 
 
 if (false){
@@ -28,7 +29,6 @@ console.log(priceA)
 if (priceA){
 	console.log("doesn't get executed")   
 } else {
-
 	console.log("Undefined variables are treated as false")   // this get's executed.  
 }
 
