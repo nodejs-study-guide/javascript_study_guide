@@ -2,8 +2,7 @@
 
 // node 01_variables/05_strings.js 
 
-
-// EXAMPLE A
+console.log("EXAMPLE A")
 // you can embed variables inside a string variable using back ticks and the ${xxx} notation. 
 
 let username = 'John'
@@ -13,7 +12,7 @@ console.log(greetingsA)
 
 
 
-// EXAMPLE B
+console.log("EXAMPLE B")
 // here's how to concatenate strings
 let messageB = "hello";
 messageB = messageB + " world";
@@ -29,7 +28,7 @@ console.log(messageB.toUpperCase())
 
 
 // EXAMPLE B
-// There's lots of builtin string "properties" available, e.g the "length" property. VScode's intellisense will list them out for you. 
+// There's are also lots of builtin string "properties" available too, e.g the "length" property. VScode's intellisense will also list them out for you too. 
 console.log("EXAMPLE D")
 console.log(messageB.length)
 console.log(typeof messageB.length)

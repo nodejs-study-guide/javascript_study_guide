@@ -1,3 +1,5 @@
+'use strict'
+
 // As a reminder, here's a couple of examples of user defined objects. 
 let message = "hello";
 function Greetings(name) {

@@ -39,7 +39,9 @@ avoid using these types.
 
 // variables are declare using the "let" keyword
 
-// EXAMPLE A
+
+console.log("EXAMPLE A")
+
 let greetingsA = "helloA"
 console.log(greetingsA)
 
@@ -62,7 +64,8 @@ console.log(typeof marriedA)
 // for more info about "typeof", see: https://www.w3schools.com/jsref/jsref_operators.asp
 
 
-// EXAMPLE B
+console.log("EXAMPLE B")
+
 // you can use "let" keyword to declare mulptiple variables, with comma acting as a delimiter. 
 let greetingsB = "helloB", 
 	ageB = 25, 
@@ -83,7 +86,7 @@ Variables names must start with one of the folllowing:
 - $
 - letter
 
-Note, a variable name cant start with a letter. 
+Note, a variable name cant start with a digit. 
 
 Variable names cannot be a key word. E.g. you can't declare a variable called "let"
 
@@ -96,7 +99,7 @@ Some javascript conventions:
 
 
 
-// EXAMPLE C
+
 // Here's a quick example of operators. 
 console.log("EXAMPLE C")
 let priceC = 20

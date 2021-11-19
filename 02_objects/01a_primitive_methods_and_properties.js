@@ -1,3 +1,5 @@
+'use strict'
+
 console.log("EXAMPLE A")
 // In javascript everything is an object. For example this variable is an object of the (primitive) type "string":
 let message = "hello";

@@ -1,3 +1,4 @@
+'use strict'
 // An object can be a user-defined composite datatype. 
 
 // Objects's are Golang's equivalent of "structs", i.e. a group of key-value stored inside a variable.
@@ -8,7 +9,7 @@
 
 
 console.log("Example A")
-person = {
+let person = {
 	name: 'John',
 	age: 32,
 	greetings: function(){return `hello ${this.name}`},
@@ -17,6 +18,8 @@ person = {
 
 
 console.log(typeof person)   // object
+
+console.log(person)    // {name: 'John', age: 32, greetings: ƒ, farewell: ƒ}
 
 console.log(person.name)            // John
 console.log(person.age)             // 32
@@ -40,7 +43,7 @@ console.log(person['age'])             // 32
 
 // another possibility is if the key's name itself is stored inside another variable, e.g.
 
-currentAgeB = "age"
+let currentAgeB = "age"
 console.log(person[currentAgeB])
 
 
@@ -49,10 +52,11 @@ console.log(person[currentAgeB])
 console.log("Example C")
 // symbol is a special data type user for storing sensitive data. 
 let mySymbol = Symbol()
-employee = {
+let employee = {
 	name: 'John',
 	age: 32,
 	[mySymbol]:  'secret data, e.g. a password' 
 }
+console.log(employee)
 // The only code that can access the secret data, is code that has access to the mySymbol variable. 
 // more info, see: https://app.pluralsight.com/course-player?clipId=5667e465-8dd0-45c8-8882-5d9aa4bb4e14

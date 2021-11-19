@@ -1,3 +1,5 @@
+'use strict'
+
 // to convert a number to a string, we can use the primitive type's builtin 'toString()' method. 
 
 
