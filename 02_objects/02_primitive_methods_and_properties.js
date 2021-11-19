@@ -23,7 +23,7 @@ console.log("EXAMPLE C")
 // For example string based variables comes with the "toUpperCase()" method and the "length" property
 
 
-console.log(message.toUpperCase())
-console.log(message.length)
+console.log(message.toUpperCase()) // HELLO
+console.log(message.length) // 5
 // For more info about these builtin string methods and properties, see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
