@@ -8,10 +8,11 @@ console.log("EXAMPLE A")
 
 let msgA = "hello"
 
-switch(msgA){
-	case "hi":
+switch (msgA) {
+	case "hi": {						// These curly braces are optional, but recommended, as explained below. 
 		console.log("message is: hi")
 		break
+	}
 	case "hello":
 		console.log("message is: hello")
 		break
@@ -38,7 +39,7 @@ switch(msgA){
 console.log("EXAMPLE B")
 let colorB = "Pink"
 
-switch(colorB){
+switch (colorB) {
 	case "bye":
 		console.log("message is: bye")
 		break
@@ -65,7 +66,7 @@ console.log("EXAMPLE C")
 
 let msgC = "2"
 
-switch(msgC){
+switch (msgC) {
 	case 1:
 		console.log("found number 1")
 		break
@@ -93,28 +94,28 @@ console.log("EXAMPLE D")
 
 let msgD = 2
 
-switch(msgD){
+switch (msgD) {
 	case 1: {
 		let msg = "found number 1"
 		console.log(msg)
 		break
 	}
-	case 2:{
+	case 2: {
 		let msg = "found number 2"
 		console.log(msg)
 		break
 	}
-	case 3:{
+	case 3: {
 		let msg = "found number 3"
 		console.log(msg)
 		break
 	}
-	case 4:{
+	case 4: {
 		let msg = "found number 4"
 		console.log(msg)
 		break
 	}
-	default:{
+	default: {
 		let msg = "Unable to determine the number's value"
 		console.log(msg)
 		break
