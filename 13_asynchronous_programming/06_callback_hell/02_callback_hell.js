@@ -31,5 +31,10 @@ setTimeout(() => {
 // This approach only forces synchronous at the high level block level. The code still runs 
 // asyncrhonously within each block scope. 
 
+// In other words, the above set up only controls when each function starts to run. It doesn't enforce any 
+// controls that prevents a function from starting before the parent function ends. So in theory it is
+// possible that all functions are running at the same time, and also the child functions can end before the 
+// parent function ends. 
+
 
 
