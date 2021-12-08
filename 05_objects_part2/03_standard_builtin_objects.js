@@ -23,13 +23,18 @@ console.log(dateStamp.getDate())
 
 
 
-// I think when we write:
+// There are 2 ways to create a string variable, the primitive way:
 
 let s = "hello"
+console.log(s)    // "s" is referred to as a "primitive"
 
-// javascript reads this as the following behind the scenes. 
+// and the constructor way, which involves using the "new" key word. 
 
-let s = new String('hello')
-console.log(s)
+let sc = new String('hello')
 
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+console.log(sc) // "sc" is referred to as a "object"
+
+
+// note javascript automatically converts string primitives to string objects behind the
+// scenes - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#:~:text=String%20literals%20(denoted,the%20property%20lookup.
+

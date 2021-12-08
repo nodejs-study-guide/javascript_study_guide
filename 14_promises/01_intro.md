@@ -1,5 +1,10 @@
-/*
-A promise is a javascript builtin object. 
+A promise is one of javascript's standard built-in objects, e.g. like the string object. 
+
+With strings, there's 2 ways to create a string, the primitive way 
+and the constructor way (using the "new" key word). However for promises, you can only create
+promises using the constructor approach, i.e using the `new` key word. 
+
+
 
 Promises let's you run 2 functions in order, so that the second function only starts running after the 1st function has finished running. 
 

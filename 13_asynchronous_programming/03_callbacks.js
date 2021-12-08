@@ -20,10 +20,11 @@ console.log(pathToFile)   // /Users/sherchowdhury/github/javascript_study_guide/
 // the following spawns a secondary thread, and reads file until the 
 // values of "err" and "content" is determined and loaded into memory (this memory is shared between all threads).
 // readFile then adds the arrow function to the eventloop queue, and then the secondary thread exits.  
-// the primary thread then executes the arrow function
+// the primary thread then executes the arrow function on the next iteration. 
 fs.readFile(pathToFile, 'utf8', (err, content) => {
 	if (err) {
 		console.error(err)
+		console.error("Encountered the following error: ", err)
 		return
 	}
 	console.log(content)
@@ -38,4 +39,7 @@ console.log("goodbye") // this get's printed first.
 
 // note, you can't use try...catch syntax to catch an error being return from a callback function. That's because
 // try...catch only works for catchng errors originating from synchronous code. Whereas callbacks by design runs 
-// asynchronously since it involved putting the call back functions on the eventloop queue.  
+// asynchronously since it involved putting the call back functions on the eventloop queue.  So, innstead of try...catch system,
+// we use the try...catch system above for error-handling.
+
+// The try...catch can only be used when working with synchronously blocking code. 

@@ -126,7 +126,7 @@ const fs = require('fs')
 fs.readFile('/path/to/someFile.txt' , (err, data) => {
   // code block. 
   if (err) {
-    console.error(err)
+    console.error("Encountered the following error: ", err)
     return
   }
   console.log(data)
@@ -145,7 +145,7 @@ doesn't get executed until at least after the values of "err" and "data" is know
 
 On the otherhand, if you do want force code blocking then you can use `fs.readFileSync`:
 
-```
+```javascript
 const fs = require('fs')
 
 try {
