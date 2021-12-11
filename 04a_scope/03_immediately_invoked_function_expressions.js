@@ -31,16 +31,18 @@ console.log("EXAMPLE B");
 console.log("EXAMPLE B1");
 // the function name is actually optional:
 
-(function() {
-  console.log('Hello B1')
-})()
+(function(msg) {
+  console.log(msg)
+})('Hello B1')
 // the above prints "Hello B1" straight away. 
+
+// the last round brackets can be used to pass in arguments to the function. 
 
 
 console.log("EXAMPLE C1");
 // note above semi-colon again. 
 
-// this output the reult from the execution of the IIFE and stores it in the variable.  
+// this output the result from the execution of the IIFE and stores it in the variable.  
 let greetingC1var = (function greetingC1() {
   return 'Hello C1'
 })();
