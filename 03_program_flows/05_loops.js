@@ -54,7 +54,7 @@ for (let myKey in personD){
 
 console.log("Example E")
 // Here's an example of a FOR-OF loop.  This is useful for iterating through an array
-
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
 
 let PeopleE = [
 	{
