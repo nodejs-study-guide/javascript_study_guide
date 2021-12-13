@@ -1,7 +1,7 @@
 console.log("EXAMPLE A")
 // function with input parameters 
 
-function greetingsA(firstName, lastName){
+function greetingsA(firstName, lastName) {
 	console.log("Hello " + firstName + " " + lastName)
 }
 
@@ -20,29 +20,43 @@ greetingsA("Tony", "Stark", "Ironman")    // Hello Tony Stark
 console.log("EXAMPLE B")
 // You can assign default values to input parameters like this:
 
-function greetingsB(firstName = "Peter", lastName = "Parker"){
+function greetingsB(firstName = "Peter", lastName = "Parker") {
 	console.log("Hello " + firstName + " " + lastName)
 }
 
-greetingsB("Daniel" , "Craig")    // Hello Daniel Craig
+greetingsB("Daniel", "Craig")    // Hello Daniel Craig
 greetingsB()                      // Hello Peter Parker
 greetingsB("Tom")		  // Hello Tom Parker
 
 
+function greetingsX(name = "World") {
+	console.log("Hello " + name)
+}
 
+greetingsX()        // Hello World
+greetingsX('John')  // Hello John
+
+
+// Here's another example
+function greetings1(message, name = "World") {
+	console.log(message + " " + name)
+}
+
+greetings1('Hello')        // Hello World
+greetings1('hi', 'John')  // Hello John
 
 
 
 console.log("EXAMPLE E")
 // function with a return value 
 // You simply use the "return" keyword to return the values you want. You don't need to specify any output parameter definitions like we do in golang.
-function greetingsE(firstName, lastName){
+function greetingsE(firstName, lastName) {
 	let message = "Hello " + firstName + " " + lastName
 	return message
 }
 
 let answerE = greetingsE("Homer", "Simpson")
-console.log(answerE) 
+console.log(answerE)
 
 
 // NOTE: functions can't return multiple return value, it can only return a single value. 
