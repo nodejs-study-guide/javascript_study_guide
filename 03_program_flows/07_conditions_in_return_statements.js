@@ -5,8 +5,8 @@ function getNameInUpperCase(userData) {
     // So we normally use multiple condition 
     // instead of that we can use the above statement.
 }
-console.log(getNameInUpperCase())
-console.log(getNameInUpperCase({}))
+console.log(getNameInUpperCase())   // undefined - which is treated as "false"
+console.log(getNameInUpperCase({})) // undefined
 console.log(getNameInUpperCase({name : "Noob master"})) // NOOB MASTER
 
 
