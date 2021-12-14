@@ -15,7 +15,8 @@ console.log("fifth parameter is: " + process.argv[4])
 // You can also see this by running:
 // node -p "process.argv" hello world
 
-
+// btw, to see all process info, do:
+// $ node -p "process"
 
 
 // Now try running:

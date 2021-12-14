@@ -55,4 +55,11 @@ Use TAB+TAB key to autocomplate:
 > Ma
 Map   Math
 ```
+This is a good technique to doing discovery work. 
 
+
+To run a js script from the command line, do:
+
+```
+$ node /path/to/myscript.js
+```
