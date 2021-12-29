@@ -1,3 +1,5 @@
+'use strict'
+
 console.log("Example A")
 // There are some classes that can be very similar, e.g. classes called "employee", "customer",
 // "student", are all likely to have similar properties, e.g. firstname, lastname, age,...etc. 

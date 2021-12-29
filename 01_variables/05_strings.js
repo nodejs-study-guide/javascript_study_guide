@@ -8,6 +8,8 @@ console.log("EXAMPLE A")
 let username = 'John'
 let greetingsA = `Hello ${username}`
 
+// The above ${xxx} inside ``, is known as "Template strings" - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
 console.log(greetingsA)
 
 

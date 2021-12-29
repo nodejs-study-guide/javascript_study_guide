@@ -5,7 +5,7 @@
 
 let myPromise2 = new Promise((resolve, reject) =>{
 	console.log("helloB1")
-	setTimeout(_ => resolve("helloB2"), 10 * 1000)
+	setTimeout(_ => resolve("helloB2"), 3 * 1000)
 })
 
 // The "async" word is put in front of a function defition
@@ -15,6 +15,7 @@ async function runThisStraightAway(){
 	// into a variable using the "=" statement. 
 	// 
 	let resolvedValue = await myPromise2    // This line is blocking. The rest of this function pauses until this completes. 
+											// it sets resolvedValue to the argument passed into the  resolve() function above
 	console.log(resolvedValue)
 	console.log("helloB4")
 } 

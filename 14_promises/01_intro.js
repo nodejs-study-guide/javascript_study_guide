@@ -31,6 +31,9 @@ let myPromise = new Promise(function (myResolve, myReject) {
 	}
 })
 
+// you can think of a promise, as a promise to execute the provided function and provide you with 
+// a result. This result being the answer to what should be run next. (myResolve or myReject)
+
 console.log(typeof myPromise) // object
 
 // promises have the ".then(funcDef1,funcDef2)" method. This method requires 2 function definitions as input parameter. 

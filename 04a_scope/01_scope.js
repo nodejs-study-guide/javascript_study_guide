@@ -51,7 +51,7 @@ console.log("EXAMPLE E")
 const e = 5
 {
 	e = 50			// this gives "TypeError: Assignment to constant variable." error
-					// however you can do 'let e = 50' or 'const e = 50' to do override in this scope only
+	// however you can do 'let e = 50' or 'const e = 50' to do override in this scope only
 	console.log(e)  // 5
 }
 console.log(e) // 5
@@ -64,3 +64,16 @@ console.log(e) // 5
 // It can be easy to pollute global scope with lots of variables. That's why it's best practice to create a single (struct)
 // object and store all your data inside it. 
 
+
+
+// this is valid, although empty curly braces is a bit pointless.  
+
+{
+	// a nested block scope
+	{
+		// anotther even more nested bloc scope. 
+		{
+			// you can write some code here. 
+		}
+	}
+}

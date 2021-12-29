@@ -1,7 +1,7 @@
 'use strict'
 console.log("EXAMPLE A")
 
-// Rest Parameters are the same thing as golang's variadic function. It even uses the same dotdotdot notation, "..."
+// Rest Parameters are the same thing as golang's variadic function. It even uses the same dotdotdot notation, "...", aka ellipsis. 
 
 let greetingsA = function greet(...names) {
     names.forEach(
