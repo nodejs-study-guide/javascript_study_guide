@@ -5,7 +5,7 @@
 const http = require('http')    // here we're using "require" to pull in the "http" built-in library. 
                                 // "require" is also used for pulling in 3rd party libraries too. 
                                 // The builtin "require" function is used to load in dependant 
-                                // builtin and 3rd party libraries. In this example it's loading in the builtin "http" module. To see a full list of the builtin modules, just go to node-repl and hit tab+tab.
+                                // builtin and 3rd party libraries. In this example it's loading in the builtin "http" module. To see a full list of the builtin modules, just start a node cli session and hit tab+tab.
                                 // Note: this "http" library only exists in nodejs. It doesn't exist in ordinary javascript.
 
 // Whenever you see the "require" statement in a script, is an indicates that this script uses the "CommonJS" module managment 

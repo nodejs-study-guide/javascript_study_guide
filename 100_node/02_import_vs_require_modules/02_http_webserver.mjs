@@ -1,12 +1,12 @@
 'use strict'
 
-// This is similar to the last example, but rather than importing the whole library, this time we're just 
-// importing a particular method from the library. This technique is called "named imports"
-import {createServer} from 'http' 
+// This is the same example as before, but this time we're using "ECMAScript" module management instead of commonJS. 
+// i.e we're using the "import" keyword rather than the "require" keyword. Also using the ".mjs" file extension. 
+import http from 'http' 
 
 
-// Also need to replace "http.createServer" to just "createServer"
-let server = createServer(function (req, res) {
+
+let server = http.createServer(function (req, res) {
     console.log("request received on " + Date())
     console.log(req)
     console.log(res)
