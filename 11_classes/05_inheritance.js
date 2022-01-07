@@ -32,7 +32,9 @@ class Person {
 }
 
 // here we use the "extend" keyword to say that the "Employee" class inherits from
-// the Person class. 
+// the Person class. Notice that inside the construct we call a function called "super()". 
+// This function is a special function that runs the  the parent class's constructor code.
+// This is how we inherit the properties and methods from the parent class. 
 class Employee extends Person {
 
 	constructor(forename, surname, age, annualSalary){
@@ -56,6 +58,8 @@ let Superman = new Employee("Clark", "Kent", 32, 45000 )
 
 console.log(Superman) // this list out parent's properties just as if it's it's own. 
 
+
+console.log(Superman.firstName)   // Clark     // notice that we can access the parent's properties, that's thanks to the "super()" function. 
 console.log(Superman.fullName)   // Clark Kent 
 console.log(Superman.isAdult())  // true
 
