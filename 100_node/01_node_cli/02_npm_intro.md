@@ -14,3 +14,24 @@ A "Node package" (aka module) is basically a **folder** that contains .js files.
 ## the npm cli
 
 the npm cli get's installed as part of node itself, so you don't have to install it seperately. 
+
+
+
+the npm command can run "scripts" defined in the package.json.
+
+each if a script is called, "test", then you run:
+
+```
+npm run test
+```
+
+the name "test" is actually a commonly used name, so common in fact that npm provides the following shorthand aliases:
+
+```
+npm test
+
+# or 
+
+npm t
+```
+
