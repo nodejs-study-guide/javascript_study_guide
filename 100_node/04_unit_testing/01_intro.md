@@ -1,4 +1,50 @@
+
+
+Unit testing is usually done with the help of the following packages:
+
+1. [mocha](https://mochajs.org/)
+
+This introduces the `describe()` and `it()` syntax blocks among other things, to help you write your tests in an organised way. They also 
+
+[Testing Node.js with Mocha](https://app.pluralsight.com/library/courses/nodejs-testing-mocha/table-of-contents) Pluralsight course
+
+
+
+
+2. [chai](https://www.chaijs.com/)
+
+this used used for doing assertions. 
+
+e.g.
+
+```
+expect(result).to.be.true
+```
+
+
+
+3. [Sinon](https://sinonjs.org/)
+
+used for setting up stubs. E.g. created a dummy database to unit test your functions against. 
+
+[Mocking Node.js with Sinon](https://app.pluralsight.com/library/courses/mocking-nodejs-sinon/table-of-contents) pluralsight course. 
+
+
+4. [Istanbul](https://istanbul.js.org/) 
+
+Used for generting your coverage reports. 
+
+
+
+
+
+
 https://app.pluralsight.com/course-player?clipId=8c9b23c8-aead-4ab6-8114-bbec14213f6c
+
+
+
+
+
 
 
 
