@@ -26,15 +26,21 @@ Here we have quite a few nesting of callbacks.
 2. it-function passes in a callback. This callback has an input parameter called "done". This "done" is used for passing in another callback function. 
 3. this user.save method accepts a callback
 4. the save function executes it's own save-based-code, and then at the end executes the passed-in callback. If the save-method encounters an error (e.g. in a try-catch block), then it runs the passed-in callback with an err value for it's input parameter, otherwise it runs with a null input parameter.  
-5. the passed-in callback contains the call to done() callback,
+5. the passed-in callback contains the call to done() callback, 
 
 
-The function definition of the "done" callback is not known, all we know is that as soon as it get's executed, it signals to the it-block that the test has ended. Also if the done() is called with an error arument, then it tells the it-block to report the test as a fail, otherwise record it as a pass. 
+The function definition of the "done" callback is not known, all we know is that as soon as it get's executed, it signals to the it-block that the test has ended. Also if the done() is called with an error argument, then it tells the it-block to report the test as a fail, otherwise record it as a pass. 
 
 
-the "done" callback only executes AFTER the method under test (user.save) exits, it would. 
+the "done" callback only executes AFTER the method under test (user.save) exits,
 
-As you can see, we don't know the content of the "done" callback function, all we know is that it's part of mocha's built in mechanism to tell it whether a particular test has ended, and also whether to record the test as a pass or a fail. 
+As you can see, we don't know the content of the "done" callback function, all we know is that it's part of mocha's built in mechanism to tell it whether a particular test has ended, and also whether to record the test as a fail (caused by function under-test throwing an exception). 
+
+For some examples, see:
+
+- https://github.com/Sher-Chowdhury/mocha_demo/tree/testing-async-code
+- https://github.com/Sher-Chowdhury/mocha_demo/tree/testing-async-code1
+
 
 Here we can think of the "done" callback as mocha's internal mechanism, and we don't need to know what lines of code are executed by this callback. All we have to do is ensure that it does get called exactly once. 
 
