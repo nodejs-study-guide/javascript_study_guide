@@ -1,7 +1,7 @@
 'use strict'
 
 // async/await is something that's used in conjunction with Promises, and it's an alternative 
-// to using the ".then"
+// to using the ".then", i.e. it's an alternative way to consome promises. 
 
 let myPromise2 = new Promise((resolve, reject) =>{
 	console.log("helloB1")

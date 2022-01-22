@@ -32,6 +32,10 @@ console.log("EXAMPLE B")
 
 const { PI, E, SQRT2 } = Math
 
+// this destructure method is often used for importing resources from node packages, e.g. 
+// xxxxxxx
+
+
 // This is a handy technique for extracting some properties from a bigger object. 
 
 // This technique also works pulling out particular methods out of a module, e.g. 
