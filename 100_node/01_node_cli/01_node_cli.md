@@ -51,6 +51,11 @@ The node's -p flag is a handy way to run a single line of javascript code on the
 ```
 $ node -p "os.cpus().length"
 12
+
+$ node -p "console.log('hello')"
+hello
+undefined
+
 ```
 
 Use TAB+TAB key to autocomplate:
