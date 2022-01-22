@@ -22,7 +22,7 @@ false
 Session saved to: examples.js
 > .exit
 $
-$ cat examples.js
+$ cat examples.js.
 let i = 4
 i == 5
 i == 4
