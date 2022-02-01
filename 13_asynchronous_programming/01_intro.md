@@ -186,4 +186,7 @@ Another way to think of it, is that all that the spawned process does, is that i
 the work it needs to do, to work out what the arguments needs to be to supply to the arrow function's input parameters. Then sends all that info back as an "event" entry to be added on the "events loop's" queue. The main thread then picks the event off the queue and executes it. 
 
 
+NOTE: A function that accepts a callback for one of it's input parameters, means that function is asynchronous. 
+
+NOTE: A function that accepts a callback for one of it's input parameters, should not also provide a return value. 
 
