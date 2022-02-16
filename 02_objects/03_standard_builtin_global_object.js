@@ -77,6 +77,13 @@ console.log(Object.getOwnPropertyNames(global))
 //   'WeakRef',            'WebAssembly'
 // ]
 
+
+// Note: some things appear to be missing, e.g. "typeof". That's because "typeof" is an operator.
+//       operators are typically symbols, e.g. "+", ">". But when a appropriate character doesn't exist,
+//       then a key-word is used instead e.g. typeof. It's not ideal, but is a good workaround.
+
+
+
 // After creating this global-object, javascript then creates global level variables for each of these
 // properties, which are named after the property's name, that means instead of:
 
