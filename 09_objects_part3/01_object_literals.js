@@ -1,3 +1,5 @@
+"use strict"
+
 /*
 There are 3 ways to create javascript objects:
 
@@ -25,7 +27,7 @@ console.log(person1)
 // Object literals are dynamic, i.e you can add a new entry:
 
 person1.age = 23
-person1.isAdult = function() { 
+person1.isAdult = function() {
 	return this.age >= 18
 }
 
@@ -39,7 +41,7 @@ console.log(person1.isAdult())
 
 console.log("EXAMPLE B")
 
-// Here's a short hand way of writing the following:
+// Let's say we have the following code:
 
 function createUserB1(firstName, lastName){
 
@@ -56,14 +58,14 @@ console.log(ironMan.greetings())
 
 
 
-// Since the above input parameters are used to directly create an object with corresponding identical key-names. We can write the above
-// in the following shorthand form:
+// Since the above input parameters are used to directly create an object with corresponding identical key-names.
+// It means we can write the above in the following shorthand form:
 
 function createUserB2(firstName, lastName){
 
 	let person = {
-		firstName,
-		lastName,
+		firstName,       // notice the short-hand on this line
+		lastName,        // notice the short-hand on this line
 		greetings() { return 'hello ' + this.firstName + ' ' + this.lastName }
 	}
 	console.log(person)
@@ -116,10 +118,10 @@ console.log(Object.is(personD1, personD2))  // false
 // That's becuase behind the scenes the object are actually pointers to a memory addresses. And in this scenario,
 // the memory addresses are different. So to make this "true", we can simply do:
 
-personD1 = personD2        // this makes both variables point to the same memory location. 
+personD1 = personD2        // this makes both variables point to the same memory location.
 console.log(Object.is(personD1, personD2)) // true
 
-// note this pointer related behaviour only applies when comparing objects. 
+// note this pointer related behaviour only applies when comparing objects.
 // If comparing primitive data, it just does a value based comparison instead, e.g:
 
 console.log(Object.is(personD1.firstName, personD2.firstName))  // true
