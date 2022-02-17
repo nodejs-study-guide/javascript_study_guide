@@ -1,18 +1,45 @@
 'use strict'
 
 
+// function myFunc(){
 
-// in the above, all three expressions gets evaluated, but only the return value of the right most expression get's used.
-// console.log(typeof Object.prototype)
+// }
 
-console.log(Object.getOwnPropertyNames(Object.prototype))
+// console.log(Object.getOwnPropertyNames(Date.prototype))
+// console.log((Date.prototype.constructor))
 
 
-let person = {
-	firstName: "David",
-	age: 25
+// let myObject = [4,6]
+// console.log(Object.getPrototypeOf(myObject).toString)
+
+// let FruitsA = ["Apple","Banana"]
+// console.log(Object.getOwnPropertyNames(FruitsA))
+
+
+
+// let FruitsB = new Array(2)
+// FruitsB[0] = "Mango"
+// FruitsB[1] = "Orange"
+
+// console.log(Object.getOwnPropertyNames(FruitsB))
+
+// //console.log(Object.getOwnPropertyNames(Array.prototype))
+
+
+// console.log(FruitsA instanceof Array) // true
+// console.log(FruitsB instanceof Array) // true
+
+// console.log(Array.prototype)
+
+
+function Person(name,age){
+	this.name = name
+	this.age = age
 }
 
-console.log(person)
-console.log(person.hasOwnProperty())
+Person.prototype.title = "Mr"
 
+
+let pete = new Person("Pete", 18)
+
+console.log(Person.prototype)
