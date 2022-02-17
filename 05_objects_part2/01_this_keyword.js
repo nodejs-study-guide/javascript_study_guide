@@ -1,3 +1,5 @@
+'use strict'
+
 console.log("EXAMPLE A")
 // "this" is a builtin object is used for accessing something that already exists in the current
 // object, which in this case is "personA"

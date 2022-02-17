@@ -1,9 +1,11 @@
+'use strict'
+
 // Standard builtin objects - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 console.log("EXAMPLE A")
-// The "Date" is a commonly used builtin object. This object exists by default in the javascript run time.  
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date 
-console.log(typeof Date)  // function     // functions are also a type of object. 
+// The "Date" is a commonly used builtin object. This object exists by default in the javascript run time.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+console.log(typeof Date)  // function     // functions are also a type of object.
 
 // This Date object has some methods:
 console.log(Date.now())   // 1632588346184
@@ -28,7 +30,7 @@ console.log(dateStamp.getDate())
 let s = "hello"
 console.log(s)    // "s" is referred to as a "primitive"
 
-// and the constructor way, which involves using the "new" key word. 
+// and the constructor way, which involves using the "new" key word.
 
 let sc = new String('hello')
 

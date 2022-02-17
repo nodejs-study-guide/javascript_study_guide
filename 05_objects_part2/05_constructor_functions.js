@@ -1,3 +1,5 @@
+'use strict'
+
 // node constructor_functions.js
 
 // You can create several object (of the same structure) like this:
@@ -43,16 +45,16 @@ console.log(person3)
 
 // This is very repetitive, and hard to maintain if you have 100s of objects. Hence better to you use a constructor like this instead:
 
-// notice there's no return statement 
+// notice there's no return statement
 function person (firstName, lastName, age, eyeColor){
   this.firstName= firstName
   this.lastName= lastName
   this.age= age
   this.eyeColor= eyeColor
-  this.greetings= function(salute){return salute + ' ' + this.firstName + ' ' + this.lastName} 
+  this.greetings= function(salute){return salute + ' ' + this.firstName + ' ' + this.lastName}
 }
 
-// The "new" keyword captures the object stored inside "this" 
+// The "new" keyword captures the object stored inside "this"
 let person4 = new person('John','Smith',23,'brown')
 
 console.log(person4)
@@ -86,11 +88,11 @@ console.log(myFather.currentAge)
 
 
 console.log("EXAMPLE C")
-// you can use the "instanceof" operator to find out wheter an object belongs to a particular class. This just does a boolean check. 
+// you can use the "instanceof" operator to find out wheter an object belongs to a particular class. This just does a boolean check.
 
 console.log(myFather instanceof String)  // false // note this is "String" object and not "string" primitive datatype
 console.log(myFather instanceof Person)  // true
-console.log(myFather instanceof Object)  // true    // since "Person", like all structs are derived from the top level "Object" data type. 
+console.log(myFather instanceof Object)  // true    // since "Person", like all structs are derived from the top level "Object" data type.
 
 
 console.log("EXAMPLE D")
