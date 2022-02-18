@@ -15,15 +15,15 @@ Object.assign(NewPersonA2, personA1)
 console.log(personA1)
 console.log(NewPersonA2)
 
-// The following is false, meaning that the two objects are pointing to 
-// different memory locations.  I.e. one is a duplicate of the other. 
-// This means you can also edit one object and it, without effecting the other. 
+// The following is false, meaning that the two objects are pointing to
+// different memory locations.  I.e. one is a duplicate of the other.
+// This means you can also edit one object and it, without effecting the other.
 console.log(Object.is(NewPersonA2, personA1)) // false
 
 
 console.log("EXAMPLE B")
-// In the above example we started by setting NewPersonA2 as an empty object. But it could have been non empty. 
-// e.g. 
+// In the above example we started by setting NewPersonA2 as an empty object. But it could have been non empty.
+// e.g.
 let personB1 = {
 	firstName: "Tom",
 	lastName: "Hanks",
@@ -40,7 +40,12 @@ let NewPersonB2 = {
 Object.assign(NewPersonB2, personB1)
 
 
+
+
 console.log(NewPersonB2)
+
+// If NewPersonB2 already had "age" property, then Object.assign() would end up doing an override, if the value
+// is different.
 
 
 
