@@ -178,3 +178,15 @@ anthony.__proto__.title = "Mrs"
 
 console.log(pete.__proto__) // { title: 'Mrs' }
 
+// Note: This concept might come in handy when writing mocks in unit tests. But not sure yet.
+
+// So if you don't want to change the "title" for all objects+constructor, but want to do an override it
+// for a particular object then, shouldn't edit anything inside __proto__, instead do it more directly
+// like this:
+
+pete.title = "Mr"
+console.log(pete)
+console.log(pete.__proto__)
+
+
+
