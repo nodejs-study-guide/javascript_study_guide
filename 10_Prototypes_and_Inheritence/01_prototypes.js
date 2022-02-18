@@ -166,6 +166,11 @@ console.log(pete.title) // Mr
 console.log(Object.getOwnPropertyNames(pete))   // [ 'name', 'age' ]
 console.log(pete)  // Person { name: 'Pete', age: 18 }  // it only shows own properties, not inherited ones.
 
+
+console.log("Reclect.ownKeys example")
+// This is similar to "Object.getOwnPropertyNames()" but also prints out Symbols too.
+console.log(Reflect.ownKeys(pete))  // [ 'name', 'age' ]
+
 // to view all the properties a object inherited from the constructor, use this special "__proto__" property,
 console.log(pete.__proto__)  // { title: 'Mr' }
 
@@ -185,8 +190,11 @@ console.log(pete.__proto__) // { title: 'Mrs' }
 // like this:
 
 pete.title = "Mr"
-console.log(pete)
-console.log(pete.__proto__)
+console.log(pete) // Person { name: 'Pete', age: 18, title: 'Mr' }
+console.log(pete.__proto__)  // { title: 'Mrs' }
+
+
+
 
 
 
