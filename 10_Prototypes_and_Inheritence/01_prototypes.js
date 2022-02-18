@@ -39,7 +39,9 @@ console.log(PersonA1)     // PersonA { firstName: 'Bruce', lastName: 'Wayne' }
 // ...then that object also comes with a default property, which is called "__proto__". This again contains a memory pointer to an empty object.
 console.log(PersonA1.__proto__) // {}
 
-// note, there is no such thing as a "prototype" property for objects
+// note, there is no such thing as a "prototype" property for objects. Actually there is, but most
+// objects don't have them. only a few of them do. Those objects are typically ones that you want to act as
+// parent-prototype-objects for other object to inherit from.
 
 
 console.log(PersonA1.prototype) // undefined
@@ -155,6 +157,24 @@ console.log(pete)  // Person { name: 'Pete', age: 18 }  // it only shows own pro
 
 console.log(pete.title) // Mr
 
-// As you can see the object created by the constructor inherited the
-// the
+// As you can see the object created by the constructor, inherited all
+// the properties stored in the contstructor's "prototype" property.
+
+
+
+// Note, since "title" is an "inherited" rather than an "own" property, it means it doesn't get listed here:
+console.log(Object.getOwnPropertyNames(pete))   // [ 'name', 'age' ]
+console.log(pete)  // Person { name: 'Pete', age: 18 }  // it only shows own properties, not inherited ones.
+
+// to view all the properties a object inherited from the constructor, use this special "__proto__" property,
+console.log(pete.__proto__)  // { title: 'Mr' }
+
+// The "__proto__" is actually a memory pointer to the constructor's "prototype" field. That means. you can do
+// something like this.
+
+let anthony = new Person("Tony", 45)
+
+anthony.__proto__.title = "Mrs"
+
+console.log(pete.__proto__) // { title: 'Mrs' }
 
