@@ -28,3 +28,6 @@ personA1.firstName = "Peter"
 // but I don't think there's a way to block someone from using the personA1.firstName property directly
 // for setting
 console.log(personA1)
+
+
+// omiting one or the other getter/setter defintion would make the property read-only or write-only.
