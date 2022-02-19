@@ -15,7 +15,9 @@ let personA1 = {
 // setter to set the name (rather than using personA1.firstName property directly):
 personA1.firstNameAccessor = "tony"
 // notice how we call the "accessor-property"'s function in the same style as a normal "data-property".
-
+// also since we're using the "=", we end up callign the setter property. Here's how to call the
+// getter:
+console.log(personA1.firstNameAccessor) // Tony
 
 
 console.log(personA1) // { firstName: 'Tony', firstname: [Getter/Setter] }
