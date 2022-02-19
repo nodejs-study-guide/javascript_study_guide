@@ -1,4 +1,5 @@
-// You can create getters and setters using methods, e.g. here's how to do it when an object created using the "object literal way"
+// You can create "accessor properties", aka getters and setters using methods.
+//  e.g. here's how to do it when an object created using the "object literal way"
 
 console.log("EXAMPLE A")
 let personA1 = {
@@ -45,6 +46,8 @@ personB1.getName()
 console.log("EXAMPLE C")
 
 // However javascript also provides some dedicated syntax in the form of property attributes for creating getters+setters:
+// first let's say we have this object:
+
 
 let personC = {
 	name: {
@@ -56,11 +59,11 @@ let personC = {
 
 console.log(personC)
 
-// Here we're using the "definProperty" method from the standard builtin "Object" object. This method requires three input parameter. 
+// Next, we use the the "definProperty" method from the standard builtin "Object" object. This method requires three input parameter.
 // 1. The object we're creating the setter/getter for - which in this case is "personC"
 // 2. The name for calling the getter/setter - which in this case is "fullName"
 // 3. A block of code encased in curly braces. This block is where you define your getters and setters. getters are defined using "get" and setters are
-//    defined using "set". 
+//    defined using "set".
 
 Object.defineProperty(personC, 'fullName',
 	{
@@ -89,7 +92,7 @@ personC.fullName = "James Bond"
 // Here's how we call the getter again:
 console.log(personC.fullName)
 
-// To summarise, from a distance, it looks like "fullName" is just another property of the personC object, when in reality that's not true. 
+// To summarise, from a distance, it looks like "fullName" is just another property of the personC object, when in reality that's not true.
 
 
 
