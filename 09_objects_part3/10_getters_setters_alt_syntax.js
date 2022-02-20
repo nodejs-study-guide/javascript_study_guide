@@ -11,6 +11,9 @@ let personA1 = {
 	set firstNameAccessor(value) { this.firstName = value.charAt(0).toUpperCase() + value.slice(1) }
 }
 
+// notice how we use the "this" key word. Normally we use the "this" key word inside constructor functions.
+// but you can also use it as part of methods defined inside object-literal definitions, like shown above.
+
 // Since we now have a setter that can set a value for the of the "firstName" property, we should use the
 // setter to set the name (rather than using personA1.firstName property directly):
 personA1.firstNameAccessor = "tony"
