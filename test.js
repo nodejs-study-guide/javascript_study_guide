@@ -13,3 +13,10 @@ console.log(greetings.toString())
 // function greetings(){
 // 	console.log("hello")
 // }
+
+console.log(Object.getOwnPropertyNames(greetings)) // [ 'length', 'name', 'prototype' ]
+
+
+console.log(greetings.length)
+console.log(greetings.name)
+console.log(greetings.prototype)
