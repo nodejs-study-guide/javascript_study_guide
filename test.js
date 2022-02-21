@@ -14,9 +14,21 @@ console.log(greetings.toString())
 // 	console.log("hello")
 // }
 
+// here are the function's non-enumerable properties:
 console.log(Object.getOwnPropertyNames(greetings)) // [ 'length', 'name', 'prototype' ]
 
 
-console.log(greetings.length)
-console.log(greetings.name)
-console.log(greetings.prototype)
+console.log(greetings.length) // 0
+console.log(greetings.name) // greetings
+console.log(greetings.prototype) // {}     // this setting only becomes important if function in question is a constructor function
+
+
+// to see all properties+methods inherited by this function, run:
+console.log(Object.getOwnPropertyNames(greetings.__proto__))
+// [
+// 	'length',      'name',
+// 	'arguments',   'caller',
+// 	'constructor', 'apply',
+// 	'bind',        'call',
+// 	'toString'
+//   ]
