@@ -95,7 +95,7 @@ let addD = (function outerD() {
     }
 
     return innerD
-})()
+}())
 
 // this IIFE invokes straight away and ends up returning the function, "innderD" which gets saved to:
 // addD variable
