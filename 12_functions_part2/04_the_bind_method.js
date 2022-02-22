@@ -1,10 +1,13 @@
+'use strict'
 /*
-Let's say we have two objects, person1 and person2.
-One of person1's property is a function (aka method), however person2 doesn't have
-this property+function (aka method).
 
-However you can still apply this person1's method to person2 using the "bind()" builtin function
+In docker, you can take an existing image, and bake in a file, so that you end up with a new image.
+
+Similarly, in javascript, you can take a function (usually a method), insert a
+variable (called "this=object1"), and output the modified function with the (this variable hard coded in).
 */
+
+// Let's say we have two objects, person1:
 
 let person1 = {
   name: 'Mary',
@@ -13,11 +16,21 @@ let person1 = {
   },
 }
 
+// ...and person2:
+
+
 let person2 = {
   name: 'John',
 }
 
-// The "bind" method creates a copy of the "getName" function and stores it as a function express, called "result.
+
+// person1 has the 'getName' which person2 doesn't have.
+
+// However you can still apply this person1's method to person2 using the "bind()" builtin function
+
+
+
+// The "bind" method creates a copy of the "getName" function and stores it as a function-expression, called "result".
 // Also this new function's internal "this" object is storing the content of person2 object.
 result =  person1.getName.bind(person2)
 
