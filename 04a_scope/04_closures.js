@@ -97,6 +97,16 @@ let addD = (function outerD() {
     return innerD
 })()
 
+// this IIFE invokes straight away and ends up returning the function, "innderD" which gets saved to:
+// addD variable
+
+console.log(typeof addD) // function
+console.log(addD.toString()) // This outputs:
+// function innerD() {
+//     counter = counter + 1
+//     return counter
+// }
+
 console.log(  addD()  ) // 1
 console.log(  addD()  ) // 2
 console.log(  addD()  ) // 3

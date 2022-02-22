@@ -8,6 +8,8 @@ function greetings() {
 	console.log(msg)
 }
 
+console.log(greetings.toString())
+
 greetings() // hi
 
 /// .... and it ignores any other variables at the time of it's execution.
