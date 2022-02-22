@@ -6,7 +6,7 @@ function greetingA() {
   return 'Hello A'
 }
 
-let msg = greetingA() 
+let msg = greetingA()
 console.log(msg) // Hello A
 
 
@@ -15,18 +15,18 @@ console.log(msg) // Hello A
 console.log("EXAMPLE B");
 
 // Note I have to end the above line with a semi-colon, otherwise I get a syntax error,
-// when the iife code runs below. 
+// when the iife code runs below.
 
 
 // IIFE - immediately invoked function expression
-// IIFE equivalent of the above 
+// IIFE equivalent of the above
 (function greetingB() {
   console.log('Hello B')
 })()
-// the above prints "Hello B" straight away. 
+// the above prints "Hello B" straight away.
 
-// At the moment, what's the point of using IIFE, it seems a bit pointless. However it does make 
-// sense when using IIFE in conjunction with "closures" which we'll cover next. 
+// At the moment, what's the point of using IIFE, it seems a bit pointless. However it does make
+// sense when using IIFE in conjunction with "closures" which we'll cover next.
 
 console.log("EXAMPLE B1");
 // the function name is actually optional:
@@ -34,15 +34,15 @@ console.log("EXAMPLE B1");
 (function(msg) {
   console.log(msg)
 })('Hello B1')
-// the above prints "Hello B1" straight away. 
+// the above prints "Hello B1" straight away.
 
-// the last round brackets can be used to pass in arguments to the function. 
+// the last round brackets can be used to pass in arguments to the function.
 
 
 console.log("EXAMPLE C1");
-// note above semi-colon again. 
+// note above semi-colon again.
 
-// this output the result from the execution of the IIFE and stores it in the variable.  
+// this output the result from the execution of the IIFE and stores it in the variable.
 let greetingC1var = (function greetingC1() {
   return 'Hello C1'
 })();
@@ -52,8 +52,8 @@ console.log(greetingC1var) // Hello C
 
 // note again, the function name is optional:
 console.log("EXAMPLE C2");
-// note above semi-colon again. 
- 
+// note above semi-colon again.
+
 let greetingC2var = (function() {
   return 'Hello C2'
 })();
