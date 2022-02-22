@@ -8,9 +8,4 @@ function greetings(){
 
 greetings()
 
-{
-let msg = "hello"
-
-greetings()
-
-}
+console.log(Object.getOwnPropertyNames(greetings))
