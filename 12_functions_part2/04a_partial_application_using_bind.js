@@ -39,4 +39,10 @@ function getName(age){
 
 let result1 =  person1.getName.bind(person2)
 
-console.log(   result1(40)   )
+// or doing "currying" (hardcode argument) with:
+// result1 =  person1.getName.bind(person2, 50)
+
+console.log(   result1(40)   )   // John is 40   // assuming you're noting currying.
+
+
+console.log(result1.name)  // bound getName
