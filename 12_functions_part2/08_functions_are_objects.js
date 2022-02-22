@@ -23,3 +23,12 @@ console.log(greetings.name) // greetings
 console.log(greetings.prototype) // {}     // this setting only becomes important if function in question is a constructor function
 
 
+// to see all properties+methods inherited by this function, run:
+console.log(Object.getOwnPropertyNames(greetings.__proto__))
+// [
+// 	'length',      'name',
+// 	'arguments',   'caller',
+// 	'constructor', 'apply',
+// 	'bind',        'call',
+// 	'toString'
+//   ]
