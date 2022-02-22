@@ -1,34 +1,16 @@
 'use strict'
 
+let msg = "hi"
+
 function greetings(){
-	console.log("hello")
+	console.log(msg)
 }
 
-console.log(greetings) // [Function: greetings]
+greetings()
 
-// to view the content of this function
-console.log(greetings.toString())
-// this outputs:
+{
+let msg = "hello"
 
-// function greetings(){
-// 	console.log("hello")
-// }
+greetings()
 
-// here are the function's non-enumerable properties:
-console.log(Object.getOwnPropertyNames(greetings)) // [ 'length', 'name', 'prototype' ]
-
-
-console.log(greetings.length) // 0
-console.log(greetings.name) // greetings
-console.log(greetings.prototype) // {}     // this setting only becomes important if function in question is a constructor function
-
-
-// to see all properties+methods inherited by this function, run:
-console.log(Object.getOwnPropertyNames(greetings.__proto__))
-// [
-// 	'length',      'name',
-// 	'arguments',   'caller',
-// 	'constructor', 'apply',
-// 	'bind',        'call',
-// 	'toString'
-//   ]
+}

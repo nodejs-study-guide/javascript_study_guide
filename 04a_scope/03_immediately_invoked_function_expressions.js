@@ -41,19 +41,18 @@ console.log("EXAMPLE B1");
 // the last round brackets can be used to pass in arguments to the function.
 
 
-console.log("EXAMPLE C1");
-// note above semi-colon again.
+console.log("EXAMPLE C1")
 
-// this output the result from the execution of the IIFE and stores it in the variable.
+// this output's the result from the execution of the IIFE and stores it in the variable.
 let greetingC1var = (function greetingC1() {
   return 'Hello C1'
-})();
+})()
 
 console.log(typeof greetingC1var) // string
 console.log(greetingC1var) // Hello C
 
 // note again, the function name is optional:
-console.log("EXAMPLE C2");
+console.log("EXAMPLE C2")
 // note above semi-colon again.
 
 let greetingC2var = (function() {
