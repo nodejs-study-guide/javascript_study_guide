@@ -25,3 +25,18 @@ console.log(   result()   ) // John is 25
 
 // We try to pass in an argument of 30, but that get's ignored.
 console.log(   result(30)   ) // John is 25
+
+// this techniqe is alson known as "currying".
+
+
+// binding also works with ordinary functions:
+
+
+
+function getName(age){
+  return this.name + ' is ' + age
+}
+
+let result1 =  person1.getName.bind(person2)
+
+console.log(   result1(40)   )
