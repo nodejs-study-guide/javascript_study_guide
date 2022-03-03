@@ -11,15 +11,21 @@ Javascript has the following primitive data types:
 - undefined
 - number
 - string
+- null      // this is special case. They are sole members of their own type. 
+- undefined // this is special case. They are sole members of their own type. 
 
 
-Javascript also supports the following composite/object/struct datatypes:
+Javascript also supports the composite data type, called "object". There are different types of objects::
 
 - Array
 - Error
 - Function
-- Object
+- classes
+- An ordinary Object that represents a structure, i.e. a struct. 
 - RegExp
+- Set
+- Map
+- Date
 
 
 You can use the "typeof" operator to print out the type of data stored in a variable. 
