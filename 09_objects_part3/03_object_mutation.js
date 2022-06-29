@@ -12,6 +12,7 @@ function increaseAgeA(person){
 	return person
 }
 
+// here we're actually passing in the memory pointer of personA1.
 personA2 = increaseAgeA(personA1)
 
 
@@ -23,10 +24,6 @@ console.log(personA2)
 // is a pointer to an object. 
 
 console.log(Object.is(personA1, personA2)) // true - i.e. both objects points to the same memory location. 
-
-
-
-
 
 
 

@@ -8,7 +8,7 @@ If an object is created using a class, then that object is a member of that clas
 However an object-literal isn't created via a class.
 
 However all objects created using the object-literal approach, by default inherits
-all the properties from a special builtin object called: "Object.prototype"
+all the properties (including methods sinces methods are a type of property) from a special builtin object called: "Object.prototype"
 
 You can see what an object-literal inherits by running:
 
@@ -48,7 +48,7 @@ let person = {
 
 console.log(person)
 
-// and then make use of the inherited properties:
+// We can then make use of the inherited properties, e.g. "hasOwnProperty":
 console.log(person.hasOwnProperty("age")) // true
 console.log(person.hasOwnProperty("lastname")) // false
 
@@ -57,7 +57,7 @@ console.log(person.hasOwnProperty("lastname")) // false
 
 
 // The Object.prototype is on the top of the prototype inheritance chain.
-// That means Date objects, Array objects, and Person objects inherit from Object.prototype.
+// That means Date objects, Array objects, and Person objects, all inherit from Object.prototype.
 
 
 
@@ -97,4 +97,4 @@ console.log(Object.getOwnPropertyNames(Array.prototype))
 
 
 // An prototype's properties included all the properties that it itself inherit's from it's
-// prototype, ..and so on. As a result an object can ultimately end up inheriting a lot of properties.
+// prototype, ..and so on. As a result an object can ultimately end up inheriting a lot of properties+methods.

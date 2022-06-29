@@ -5,13 +5,11 @@
 
 
 
-// not sure why but needed to use semicolon in this line
 let price = 28 ;
+// have to use semi-colon above because next line starts with a "("
 
+(price > 20) ? console.log("expensive") : console.log("cheap")
 
-(price > 20) ? console.log("expensive") : console.log("cheap");
-
-// Found a weird bug if I leave out the semicolon at the end of each line
 
 // the round brackets around the condition part is actually optional, e.g.:
 

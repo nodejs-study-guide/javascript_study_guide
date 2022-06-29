@@ -1,4 +1,4 @@
-// You can create "accessor properties", aka getters and setters using methods.
+// You can create "accessor properties", aka getters and setters by createing your own custom get/set methods.
 //  e.g. here's how to do it when an object created using the "object literal way"
 
 console.log("EXAMPLE A")
@@ -59,7 +59,7 @@ let personC = {
 
 console.log(personC)
 
-// Next, we use the the "definProperty" method from the standard builtin "Object" object. This method requires three input parameter.
+// Next, we use the the "defineProperty" method from the standard builtin "Object" object. This method requires three input parameter.
 // 1. The object we're creating the setter/getter for - which in this case is "personC"
 // 2. The name for calling the getter/setter - which in this case is "fullName"
 // 3. A block of code encased in curly braces. This block is where you define your getters and setters. getters are defined using "get" and setters are

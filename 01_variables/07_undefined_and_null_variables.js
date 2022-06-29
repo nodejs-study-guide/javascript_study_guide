@@ -1,7 +1,7 @@
 'use strict'
 
 // undefined: you create a variable without assigning value to it.
-// null: you had a variable with data, but emptied it out by using "null":
+// null: you had a variable containing data, but emptied it out by using "null":
 
 
 // Declared but not initialised:

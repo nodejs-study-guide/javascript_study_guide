@@ -71,9 +71,12 @@ console.log(e) // 5
 {
 	// a nested block scope
 	{
-		// anotther even more nested bloc scope. 
+		// another even more nested bloc scope.
 		{
 			// you can write some code here. 
 		}
 	}
 }
+
+// The above can also be written as simply:
+{{{}}}

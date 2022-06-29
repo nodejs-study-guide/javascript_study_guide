@@ -44,7 +44,7 @@ console.log(addB()) // 1
 console.log(addB()) // 1
 console.log(addB()) // 1
 
-// this makes it worse, becuase the counter gets resetted each time add() is called. 
+// this makes it worse, because the counter gets reset each time add() is called.
 
 // So we need some way to create our counter variable outside the add() function 
 // but also so that only our add() can access+update.  
@@ -55,7 +55,7 @@ console.log(addB()) // 1
 
 
 
-// Therefore we need some way for us to for our "add" function, to 
+// Therefore, we need some way for us to for our "add" function, to
 // 1. set an initial starting counter
 // 2. increment the counter
 // 3. Keep track of the state of the updated counter value.

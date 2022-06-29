@@ -12,7 +12,7 @@ console.log(Date.now())   // 1632588346184
 
 
 
-// however other methods of Date (all the "prototype" methods), are accessible by creating an object of the type "Date". That's done using the "new" key word:
+// however, other methods of Date (all the "prototype" methods), are accessible by first creating an object of the type "Date". That's done using the "new" key word:
 
 
 let dateStamp = new Date()

@@ -8,7 +8,12 @@ function greetings() {
 	console.log(msg)
 }
 
-console.log(greetings.toString())
+console.log(greetings.toString())  // this prints the above function definition to the terminal, i.e. this outputs:
+// function greetings() {
+// 	console.log(msg)
+// }
+// this can be handy for debugging purposes.
+
 
 greetings() // hi
 
@@ -20,5 +25,6 @@ greetings() // hi
 
 }
 
+// back to th original scope where greetings function was defined.
 msg = "hello world"
 greetings() // hello world

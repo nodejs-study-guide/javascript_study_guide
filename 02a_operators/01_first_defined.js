@@ -2,14 +2,16 @@
 
 let y = "world"
 let x
-// x = "Tom"
+x = "Tom"
 let nameVar
 
+// Here's a ternary operator:
+nameVar = (x !== null && x !== undefined) ? x : y
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 
-// nameVar = (x !== null && x !== undefined) ? x : y
 
 // The first defined operator (??) lets you write the above line in a more shorthand form:
-nameVar = x ?? y
+// nameVar = x ?? y
 
 
 console.log(`hello ${ nameVar }`)

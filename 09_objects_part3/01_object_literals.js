@@ -4,7 +4,7 @@
 There are 3 ways to create javascript objects:
 
 1. Object Literals
-2. Constructor functions
+2. Constructor functions aka object constructor functions
 3. Classes
 
 */
@@ -22,7 +22,18 @@ let person1 = {
 }
 
 
-console.log(person1)
+console.log(person1)  // This outputs:
+// {
+// 	firstName: 'John',
+// 	lastName: 'Smith',
+// 	eyeColor: 'brown',
+// 	greetings: [Function: greetings]
+// }
+
+// notice that this is just a generic object, not an object of a particular "object type", e.g. "Person" object. That can be achieved using
+// "object constructor functions", which we discussed earlier.
+
+
 
 // Object literals are dynamic, i.e you can add a new entry:
 
@@ -41,7 +52,8 @@ console.log(person1.isAdult())
 
 console.log("EXAMPLE B")
 
-// Let's say we have the following code:
+// you can create functions that can create object literals, this approach helps to reduce code duplication when
+// creating multiple object literals.
 
 function createUserB1(firstName, lastName){
 
@@ -66,18 +78,28 @@ function createUserB2(firstName, lastName){
 	let person = {
 		firstName,       // notice the short-hand on this line
 		lastName,        // notice the short-hand on this line
-		greetings() { return 'hello ' + this.firstName + ' ' + this.lastName }
+		greetings() { return 'hello ' + this.firstName + ' ' + this.lastName } // this is also slightly shorthand
 	}
 	console.log(person)
 	return person
 
 }
-spiderMan = createUserB2("Peter", "Parker")
 
-// Also noticed greeting function is written in a slightly more short-hand form too:
+let spiderMan = createUserB2("Peter", "Parker")
 
+// again we can dynamically add new properties since we're still dealing with object literals
+spiderMan.hairColor = "brown"
 
-console.log(spiderMan.greetings())
+console.log(spiderMan) // this outputs:
+// {
+//   firstName: 'Peter',
+//   lastName: 'Parker',
+//   greetings: [Function: greetings],
+//   hairColor: 'brown'
+// }
+
+console.log(spiderMan.greetings())   // hello Peter Parker
+
 
 
 

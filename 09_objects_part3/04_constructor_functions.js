@@ -22,7 +22,16 @@ let personA = {
 }
 
 
-console.log(personA)
+console.log(personA) // This outputs:
+// {                            <= notice, no object type is mentioned here (see further down for more info).
+//   firstName: 'John',
+//   lastName: 'Smith',
+//   eyeColor: 'brown',
+//   greetings: [Function: greetings]
+// }
+
+
+
 
 // Object literals are dynamic, i.e you can add a new entry:
 
@@ -38,7 +47,8 @@ delete personA.eyeColor       // notice we deleted a property.
 // add/remove properties from an object, after it's been created.
 console.log(personA)
 
-// Also creating multiple objects using this approach can use up a lot of lines.
+// Also creating multiple objects using this approach can use up a lot of lines. A workaround for that, which we saw
+// earlier, is to create a function that creates+returns object literals.
 
 
 console.log("EXAMPLE B")
@@ -66,12 +76,27 @@ function Person(foreName, surName, age) {
 
 let superman = new Person("Clark", "Kent", 40)
 
-console.log(superman)
+console.log(superman) // This outputs:
+// Person {                    <= Notice this time, the object is of the type "Person"
+//   firstName: 'Clark',
+//   lastName: 'Kent',
+//   age: 40,
+//   greetings: [Function (anonymous)],
+//   isAdult: [Function (anonymous)]
+// }
 
-console.log(superman.greetings())
 
+console.log(superman.greetings())   // hello Clark Kent
 
 // you can also dynamically add/delete properties to an existing object.
 superman.eyeColor = "blue"
 
-console.log(superman)
+console.log(superman) // This outputs:
+// Person {
+//   firstName: 'Clark',
+//   lastName: 'Kent',
+//   age: 40,
+//   greetings: [Function (anonymous)],
+//   isAdult: [Function (anonymous)],
+//   eyeColor: 'blue'                   <= new property
+// }

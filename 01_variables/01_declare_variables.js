@@ -41,9 +41,10 @@ avoid using these types.
 */
 
 
+// you can run this script, by cloning this repo, cd-ing into it, and then running:
+// node ./01_variables/01_declare_variables.js
 
-
-// variables are declare using the "let" keyword
+// variables are declared using the "let" keyword
 
 
 console.log("EXAMPLE A")

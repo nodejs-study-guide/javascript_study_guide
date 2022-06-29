@@ -3,7 +3,7 @@
 console.log("EXAMPLE A")
 // In javascript everything is an object. For example this variable is an object of the (primitive) type "string":
 let message = "hello";
-console.log(message)
+console.log(message)  // hello
 console.log(typeof message) // string
 
 

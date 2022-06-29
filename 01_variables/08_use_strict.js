@@ -1,5 +1,5 @@
-"use strict"
-
+// "use strict"
+// 'use strict'
 // The following works without needing to declared the variable using the "let" keyword. 
 msg = "hello"
 

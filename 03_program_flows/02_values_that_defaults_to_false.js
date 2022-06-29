@@ -51,7 +51,7 @@ if (invalidNumber){
 }
 
 
-// Everyting else is treated as true. e.g. 
+// Everything else is treated as true. e.g.
 
 if ("hello"){
 	console.log("Any non empty string is treated as true")     // this get's executed.  

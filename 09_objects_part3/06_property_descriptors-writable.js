@@ -21,7 +21,7 @@ console.log(Object.getOwnPropertyDescriptor(personA1, "lastName"))
 // enumerable - This sets whether a property is visible when the object's properties
 //		are iterated via a for-in loop
 // configurable - set's whether the first two settings "writable" and "enumerable" are read-only. 
-// 		  i.e. it prevents you from changin property descriptors. 
+// 		  i.e. it prevents you from changing property descriptors.
 
 
 // Here's how to change a description property. This is done using the buitlin "Object"'s defineProperty method.  

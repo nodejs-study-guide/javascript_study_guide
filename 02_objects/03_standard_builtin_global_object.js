@@ -15,7 +15,7 @@ function Greetings(name) {
 // them upfront. You can find them here - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 
-// java script automatically generates "global object" just before it executes your code. The property of this
+// javascript automatically generates "global object" just before it executes your code. The property of this
 // global object stores:
 
 // 1. Global constants, e.g. "Infinity"
@@ -135,7 +135,7 @@ console.log(Date())  // Fri Nov 19 2021 16:06:48 GMT+0000 (Greenwich Mean Time)
 console.log(Date.now())  // 1612720322842
 
 
-// However to use the 'protoytpe' functions you have to create a "Date" object and apply the function to that object
+// However to use the 'prototype' functions you have to create a "Date" object and apply the function to that object
 let y = new Date()
 
 // I think the "new" indicates that this is a constructor function - https://github.com/Sher-Chowdhury/javascript_study_guide/blob/main/constructor_functions.js

@@ -16,21 +16,20 @@ let person = {
 	greetings: function(){return `hello ${this.name}`},
 	farewell: function(){return "goodbye " + this.name },
 	myName() {return "My name is Clark Kent"},              // slightly shortand syntax
-	myAlias: ()  => {return "I'm also known as Superman"}   // example of an arrow function.
+	myAlias: () => {return "I'm also known as Superman"}   // example of an arrow function.
 }
 
 
 console.log(typeof person)   // object
 
-console.log(person)    // {name: 'John', age: 32, greetings: ƒ, farewell: ƒ}
+console.log(person)
 
 console.log(person.name)            // John
 console.log(person.age)             // 32
 console.log(person.greetings())     // hello John
 console.log(person.farewell())      // goodbye John
-console.log(person.myName())
-console.log(person.myAlias())
-
+console.log(person.myName())        // My name is Clark Kent
+console.log(person.myAlias())       // I'm also known as Superman
 
 // accessing a non-existient property
 console.log(person.gender)          // undefined     // noticed script doesn't fail.
@@ -50,7 +49,7 @@ console.log(person['age'])             // 32
 // another possibility is if the key's name itself is stored inside another variable, e.g.
 
 let currentAgeB = "age"
-console.log(person[currentAgeB])
+console.log(person[currentAgeB])  // 32
 
 
 

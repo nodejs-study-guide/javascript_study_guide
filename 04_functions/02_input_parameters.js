@@ -1,3 +1,5 @@
+'use strict'
+
 console.log("EXAMPLE A")
 // function with input parameters 
 

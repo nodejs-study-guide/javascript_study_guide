@@ -1,10 +1,12 @@
+'use strict'
+
 console.log("EXAMPLE A")
 // a simple function
 function greetingsA(){
 	console.log("hello world")
 }
 
-// Functions makes it easy to rerun the same block of code multiple times. 
+// Functions make it easy to rerun the same block of code multiple times.
 greetingsA()
 greetingsA()
 

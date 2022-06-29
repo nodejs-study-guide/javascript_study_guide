@@ -10,4 +10,4 @@ console.log(getNameInUpperCase({})) // undefined
 console.log(getNameInUpperCase({name : "Noob master"})) // NOOB MASTER
 
 
-// this was exmaple 5 in - https://levelup.gitconnected.com/secrets-of-logical-%EF%B8%8F-operator-in-javascript-98efbae5e8aa
+// this was example 5 in - https://levelup.gitconnected.com/secrets-of-logical-%EF%B8%8F-operator-in-javascript-98efbae5e8aa

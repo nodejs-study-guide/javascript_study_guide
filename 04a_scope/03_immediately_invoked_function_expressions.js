@@ -16,8 +16,7 @@ console.log(msg) // Hello A
 
 console.log("EXAMPLE B");
 
-// Note I have to end the above line with a semi-colon, otherwise I get a syntax error,
-// when the iife code runs below.
+// Note I have to end the above line with a semi-colon, that's because the next line starts with '('
 
 
 // IIFE - immediately invoked function expression
@@ -53,13 +52,10 @@ console.log(greetingC1var) // Hello C
 
 // note again, the function name is optional:
 console.log("EXAMPLE C2")
-// note above semi-colon again.
 
 let greetingC2var = (function() {
   return 'Hello C2'
-})();
+})()
 
 console.log(typeof greetingC2var) // string
 console.log(greetingC2var) // Hello C
-
-// note again, the function name is optional
