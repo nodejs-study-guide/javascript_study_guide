@@ -82,7 +82,6 @@ function createUserB2(firstName, lastName){
 	}
 	console.log(person)
 	return person
-
 }
 
 let spiderMan = createUserB2("Peter", "Parker")
@@ -99,8 +98,6 @@ console.log(spiderMan) // this outputs:
 // }
 
 console.log(spiderMan.greetings())   // hello Peter Parker
-
-
 
 
 console.log("EXAMPLE C")

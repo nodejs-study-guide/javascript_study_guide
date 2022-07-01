@@ -13,7 +13,6 @@ let person1 = {
   eyeColor: 'brown',
   greetings: function(){return 'hello ' + this.firstName + ' ' + this.lastName}
 }
-
 console.log(person1)
 
 let person2 = {
@@ -23,9 +22,7 @@ let person2 = {
   eyeColor: 'brown',
   greetings: function(){return 'hello ' + this.firstName + ' ' + this.lastName}
 }
-
 console.log(person2)
-
 
 let person3 = {
   firstName: 'Mike',
@@ -34,12 +31,7 @@ let person3 = {
   eyeColor: 'blue',
   greetings: function(){return 'hello ' + this.firstName + ' ' + this.lastName}
 }
-
 console.log(person3)
-
-
-
-
 
 
 

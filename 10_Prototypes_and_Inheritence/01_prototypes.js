@@ -9,32 +9,55 @@ function PersonA(forename, surname){
 	this.lastName = surname
 
 	this.greetings = function () { return 'hello ' + this.firstName + ' ' + this.lastName }
-
-
 }
 
-console.log(typeof PersonA)
-console.log(PersonA)
+console.log(typeof PersonA) // function
+console.log(PersonA) // [Function: PersonA]
 
-console.log("Example A1XXXXXXXXXXXXXXXXX")
-// When you create a constructor function, it comes with a default property called "prototype".
+
+console.log("Example A1")
+// When you create a constructor function, it comes with some default properties, one of which is called "prototype".
+// these properties, enumerable setting is set to false, so to view them you have to do:
+console.log(Object.getOwnPropertyNames(PersonA)) // [ 'length', 'name', 'prototype' ]
+
 // this prototype stores a memory pointer to a generic empty object:
 console.log(PersonA.prototype) // {}
+
+console.log("Example A2")
+
 // This might look like an empty object, but in actual fact it does contain properties,
-// but these properties are hidden, because their enumerable property is set to false.
+// but again these properties are hidden, because their enumerable property is set to false.
 // So here's a work around instead:
 console.log(Object.getOwnPropertyNames(PersonA.prototype)) // [ 'constructor' ]
 // This shows that this prototype has a property called "constructor"
 
-console.log("Example A2XXXXXXXXXXXXXXXXX")
+console.log(typeof PersonA.prototype.constructor)  // function
+
+// let's now take a look at what this function looks like
+console.log(PersonA.prototype.constructor.toString()) // this outputs:
+// function PersonA(forename, surname){
+// 	this.firstName = forename
+// 	this.lastName = surname
+//
+// 	this.greetings = function () { return 'hello ' + this.firstName + ' ' + this.lastName }
+// }
+
+
+console.log("Example A2")
 // fyi, as reminder, here's how you can create a generic empty object:
 // let myObject = {}
 
-// Also when you create new object using the constructor function,
+
+
+
+// Also when you create new objects using constructor function, e.g.:
 let PersonA1 = new PersonA("Bruce", "Wayne")
 let PersonA2 = new PersonA("Clark", "Kent")
 
+// these objects also comes with default properties (which again are hidden):
 console.log(PersonA1)     // PersonA { firstName: 'Bruce', lastName: 'Wayne' }
+
+
 
 // ...then that object also comes with a default property, which is called "__proto__". This again contains a memory pointer to an empty object.
 console.log(PersonA1.__proto__) // {}
@@ -52,8 +75,8 @@ console.log("Example B")
 
 console.log(PersonA.prototype === PersonA1.__proto__) // true
 
-// That means if you want add new properties+methods to the constructor function, and want all the existing (already instantiated) objects
-// to inherit them, the you can do this via the default prototype (or __proto__) property.
+// That means if you want to add new properties+methods to the constructor function, and want all the existing (already instantiated) objects
+// to inherit them, then you can do this via the default prototype (or __proto__) property.
 
 PersonA2.__proto__.age = 40
 

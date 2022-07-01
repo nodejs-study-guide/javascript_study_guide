@@ -16,7 +16,7 @@ console.log("EXAMPLE A")
 // Here's an example of a ReferenceError:
 
 try {
-	console.log(result) // this line will fail becuase the "result" variable was never declared. 
+	console.log(result) // this line will fail because the "result" variable was never declared.
 
 } catch (error) {
 	console.log(error.message) // result is not defined
