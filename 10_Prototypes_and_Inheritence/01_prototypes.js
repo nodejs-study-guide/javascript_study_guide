@@ -16,9 +16,10 @@ console.log(PersonA) // [Function: PersonA]
 
 
 console.log("Example A1")
-// When you create a constructor function, it comes with some default properties, one of which is called "prototype".
-// these properties, enumerable setting is set to false, so to view them you have to do:
+// In javascript, a function is also an object. So when you create a constructor function, it comes with some default properties, one of which is called "prototype".
+// these properties's enumerable setting is set to false, so to view them you have to do:
 console.log(Object.getOwnPropertyNames(PersonA)) // [ 'length', 'name', 'prototype' ]
+
 
 // this prototype stores a memory pointer to a generic empty object:
 console.log(PersonA.prototype) // {}
