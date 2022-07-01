@@ -32,7 +32,7 @@ console.log(Object.prototype) // [Object: null prototype] {}
 console.log(Object.prototype.__proto__) // null
 console.log(PersonA.__proto__.__proto__.__proto__) // null
 
-// console.log(PersonA.__proto__.__proto__.__proto__) // null
+// console.log(Person.__proto__.__proto__.__proto__) // null
 
 
 // here we can see that we have a chain of inheritence. 
