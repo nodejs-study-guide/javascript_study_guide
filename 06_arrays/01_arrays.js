@@ -59,7 +59,7 @@ console.log(listC)   // [ 1, 10, 3, 85, <1 empty item>, 85 ]
 
 
 console.log("EXAMPLE D")
-//Appedning to an array is done using builtin methods:
+//Appending to an array is done using builtin methods:
 
 let listD = [ 1, 2, 3 ];
 
