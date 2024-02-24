@@ -18,17 +18,31 @@ npx tsc --init // this creates the tsconfig.json file
 Note: the `npx` means using the `tsc` binary from inside the `node_modules` folder
 
 
-Update package.json file
+Update package.json file by running:
 
 ```
 npm set-script build "tsc" 
 npm set-script start "node hello.js" 
 ```
 
+
 Instead of `build` script, you can also use `prestart` - https://docs.npmjs.com/cli/v9/using-npm/scripts#npm-start
 
+This `hello.js` file doesn't exist yet. Instead we'll create a `hello.ts` file and then run `npm build`. Typescript will then generate the `hello.js` using the content from `hello.ts`
 
-then create the `hello.ts` file. 
+
+Then create the `hello.ts` file:
+
+```typescript
+// This is an industrial-grade general-purpose greeter function:
+function greet(person: string, date: string) {
+    console.log(`Hello ${person}, today is ${date}!`);
+}
+
+greet("Brendan", "monday");
+```
+
+
 
 
 This generates *.js from each corresponding *.ts file:
@@ -36,28 +50,9 @@ This generates *.js from each corresponding *.ts file:
 ```shell
 npm run build
 ```
-Note, in webstorm's file tree view, it shows each each js file nested under the ts file, for better readability. 
+
 
 Now run the script:
-
-```shell
-npm start
-```
-
-
-
-
-
-
-```
-
-Then create the `hello.ts` file with the content:
-
-```shell
-
-```
-
-Then to run it, do:
 
 ```shell
 npm start
