@@ -1,4 +1,5 @@
 ref - https://www.typescriptlang.org/docs/handbook/2/basic-types.html
+- https://www.pluralsight.com/courses/typescript-5-fundamentals
 
 ```shell
 node --version
@@ -24,6 +25,8 @@ Update package.json file by running:
 npm set-script build "tsc" 
 npm set-script start "node hello.js" 
 ```
+Note: `set-script` is now deprecated, instead use - https://docs.npmjs.com/cli/v8/commands/npm-pkg
+or just edit the package.json file directly. 
 
 
 Instead of `build` script, you can also use `prestart` - https://docs.npmjs.com/cli/v9/using-npm/scripts#npm-start
@@ -57,3 +60,14 @@ Now run the script:
 ```shell
 npm start
 ```
+
+If you want to update+build+run just one .ts file, then you can do:
+
+```
+vim hello.ts
+npx tsc hello.ts
+node hello.js
+```
+
+
+
