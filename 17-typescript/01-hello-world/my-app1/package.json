@@ -8,7 +8,7 @@
     "build": "tsc",
     "prestart": "tsc",
     "start": "node hello.js",
-    "01": "node 01.js"
+    "01": "node 01-strings.js"
   },
   "keywords": [],
   "author": "",
