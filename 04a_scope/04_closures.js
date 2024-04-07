@@ -1,8 +1,5 @@
 'use strict'
 
-
-
-
 console.log("EXAMPLE C")
 
 
@@ -39,7 +36,7 @@ console.log(  addC()()  ) // 1
 // each call keeps executing the both outer and then inner functions. So we need a away to
 // only execute the outer function once:
 
-
+console.log("EXAMPLE C1")
 
 let addC1 = addC() // Here we're running the entire function once, and capturing just the return value,
                  // which is the function.
@@ -78,3 +75,21 @@ console.log(  addD()  ) // 1
 console.log(  addD()  ) // 2
 console.log(  addD()  ) // 3
 
+
+
+// Here's a demo of the Nullish coalescing assignment
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
+// I thought it could be used as an alternative to closures, but I'm wrong, since the "counter" needs te be created before hand. 
+console.log("EXAMPLE E")
+
+
+function addE() {
+    let counter
+    counter ??= 0
+    counter = counter + 1
+    return counter
+}
+
+console.log(  addE()  ) // 1
+console.log(  addE()  ) // 1
+console.log(  addE()  ) // 1

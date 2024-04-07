@@ -48,7 +48,7 @@ let greetingC1var = (function greetingC1() {
 })()
 
 console.log(typeof greetingC1var) // string
-console.log(greetingC1var) // Hello C
+console.log(greetingC1var) // Hello C1
 
 // note again, the function name is optional:
 console.log("EXAMPLE C2")
@@ -58,4 +58,4 @@ let greetingC2var = (function() {
 })()
 
 console.log(typeof greetingC2var) // string
-console.log(greetingC2var) // Hello C
+console.log(greetingC2var) // Hello C2
