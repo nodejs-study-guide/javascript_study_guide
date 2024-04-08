@@ -15,7 +15,7 @@ interface Person {
 
 // notice the slightly different syntax here.
 // here the input parameter signature acts as the property/key, and 
-//the output parameter signature acts as the value.
+// the output parameter signature acts as the value.
 interface Goodbye {
   (name: string): void
 }
