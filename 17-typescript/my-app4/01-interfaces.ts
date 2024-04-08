@@ -13,18 +13,30 @@ interface Person {
   farewell: Goodbye
 }
 
+// An interace, is simply a colleection of property and method definitions. 
+
 // notice the slightly different syntax here.
+// The syntax nearly looks like an arrow function, but we're using a colon instead of an arrow. 
 // here the input parameter signature acts as the property/key, and 
 // the output parameter signature acts as the value.
 interface Goodbye {
   (name: string): void
 }
 
+let goodbyeMsg1: Goodbye
+goodbyeMsg1 = (name) => {
+  console.log('Goodbye... ' + name)
+
+}
+
+goodbyeMsg1("Clark")
 
 
+// Here's an example of a function that accepts an interface as one of it's input parameter. 
 function greetings(person: Person) {
   return "Hello " + person.firstName + " " + person.lastName
 }
+
 
 function humanWalk(distance: number): string {
   return `Human has walked ${distance} in a straight line`
@@ -40,9 +52,13 @@ let user1: Person = {
 
 // The following also works, even though we don't explicitly set this as a "Person" type, 
 // and also has a third key, called "age". The greetings function will accept this since it has keys called "firstName", "lastName"
-// and "walk", and they are all of the right stypes
+// and "walk", and they are all of the right types
 // This concept is called "duck typing", i.e. it looks like a duck, walks like a duck, and sounds like a duck, so probably is a duck. 
-// This is a bit of a loose mechanism, which I don't like. 
+
+// This is a bit of a loose mechanism, which I don't like. If I wanted to avoid ducktyping then I need to be more explicit, like this:
+// let user2: Person = { ...
+
+
 // also faveBook is optional so we don't need to set it here. 
 let user2 = { 
   firstName: "Donald", 
@@ -52,7 +68,10 @@ let user2 = {
   farewell: (name: string): void => console.log(`goodbye ${name}`)
 }
 
+
 let msg1 = greetings(user1)
+// Notice here that the greetings function requires a "Person" parameter, but it still works even though user2 isn't actually a 
+// Person object. That's thanks to ducktypiing. 
 let msg2 = greetings(user2)
 
 
